@@ -2,7 +2,7 @@
 
 _LC 2026-04-15_
 
-[fMRIprep documentation](https://fmriprep.org/en/stable/) | [Docker usage](https://www.nipreps.org/apps/docker/)
+[fMRIprep documentation](https://fmriprep.org/en/stable/usage.html) | [fmriprep-docker usage](https://fmriprep.org/en/20.2.0/docker.html)
 
 ---
 
@@ -52,13 +52,58 @@ Before running fMRIprep:
 
 ---
 
+## Installing the `fmriprep-docker` wrapper
+Since we are calling fmriprep with docker, we first need to install the [wrapper](https://fmriprep.org/en/20.2.0/installation.html#the-fmriprep-docker-wrapper).
+
+Make sure the python `venv_MRI_preprocessing` is activated and then
+
+```bash
+pip install fmriprep-docker
+```
+
+## Making sure that the `WORK_DIR` is on `/data00`
+This is specific to our windoze network-mounted disk condition/curse.
+
+> **⚠️ Work directory must be on local storage**
+>
+> fMRIPrep uses a SQLite database in the work directory (`-w`) to track
+> pipeline state. SQLite relies on POSIX file locking, which **does not work
+> reliably on network-mounted filesystems** (NFS, CIFS/Samba). Running the
+> work directory on `/data03` (network share) will cause
+> `sqlite3.OperationalError: database is locked` errors.
+>
+> **Rule of thumb:**
+> | Path | Storage | Use for |
+> |------|---------|---------|
+> | `/data00/...` | Local disk | `-w workdir` ← put it here |
+> | `/data03/...` | Network mount | `bids_root`, `deriv_root` only |
+>
+> ```bash
+> # ✅ Correct
+> work_dir="./fmriprep_work_MASSIVE"
+>
+> # ❌ Breaks SQLite locking
+> work_dir="/data03/MRI_hackaton_data/.../fmriprep_work"
+> ```
+>
+> ⚠️ The work directory is only intermediate cache — it does not need to be
+> shared. Only inputs (BIDS) and outputs (derivatives) belong on `/data03`.
+>
+> ⚠️ **YOU SHOULD DELETE THE WORK_DIR SOON AFTER FMRIPREP HAS FINISHED** ⚠️
+
+
 ## The fMRIprep command
 
 ```bash
 # ── Paths ──────────────────────────────────────────────────────────────────
 bids_root="/data03/MRI_hackaton_data/Data_collection/bids"
 deriv_root="/data03/MRI_hackaton_data/Data_collection/fmriprep"
-work_dir="/data03/MRI_hackaton_data/Data_collection/fmriprep_work"
+work_dir="./fmriprep_work_MASSIVE_DELETE_ASAP"
+
+# ── Create the work_dir so that docker can work in it ──────────────────────
+# Also removes previous versions of work_dir
+[ -d ${work_dir}  ] && rm -rf ${work_dir}
+[ ! -d ${work_dir} ] && mkdir -p ${work_dir}
 
 # ── FreeSurfer license ─────────────────────────────────────────────────────
 # Some users may not have FREESURFER_HOME set in their environment
@@ -68,13 +113,15 @@ FREESURFER_HOME="/usr/local/freesurfer"
 # Number of CPU cores for this fmriprep call.
 # If N people run fmriprep simultaneously: nprocs ≈ total_cores / N
 # Storm has 32 cores; with 4 people running at once, use nprocs=7 or 8.
-nprocs=5
+nprocs=7
 
 # ── Run fMRIprep ───────────────────────────────────────────────────────────
 fmriprep-docker \
     ${bids_root} \
     ${deriv_root} \
     participant \
+    -u $(id -u):$(id -g) \
+    --no-tty \
     --fs-no-reconall \
     --fs-license-file ${FREESURFER_HOME}/license.txt \
     --output-spaces MNI152NLin2009cAsym:res-2 \
@@ -82,8 +129,6 @@ fmriprep-docker \
     --dvars-spike-threshold 1.5 \
     --ignore slicetiming \
     --nprocs ${nprocs} \
-    --track-carbon \
-    --country-iso-code NL \
     --write-graph \
     --notrack \
     -w ${work_dir}
@@ -104,6 +149,15 @@ This is useful when multiple people run fMRIprep simultaneously — each person 
 ---
 
 ## Flag-by-flag explanation
+
+### `-u $(id -u):$(id -g)`
+This runs docker as the current user, instead of as root (of the container). `$(id -u)` expands to your numeric user ID (e.g. `1001`) and `$(id -g)` to your primary group ID. Passing `-u UID:GID` to Docker tells the container to run fMRIprep's processes as *you* instead of root — so all files written to mounted volumes (work dir, derivatives) will be owned by your user on the host. This is done so that the user can remove the `WORK_DIR` when fmriprep has finished.
+
+### `--no-tty`
+`fmriprep-docker` automatically passes `-it` to the underlying `docker run`
+command, which requests an interactive terminal (TTY). When running in the
+foreground this is fine, but when detaching with `nohup ... &` there is no
+terminal attached — Docker detects this and exits immediately.
 
 ### `--fs-no-reconall`
 Disables FreeSurfer's cortical surface reconstruction. **Required** in our setup because our data lives on Windows-connected network drives (`/data03`), which do not support symbolic links — and FreeSurfer's reconstruction relies heavily on symlinks.
@@ -140,10 +194,6 @@ Maximum number of parallel processes for fMRIprep's internal workflow engine (ni
 
 > `--n_cpus` and `--nthreads` are older aliases for `--nprocs` — they still work but `--nprocs` is the canonical modern flag.
 
-### `--track-carbon` and `--country-iso-code NL`
-Estimates the carbon footprint of the computation using the `codecarbon` library. Results are saved to an `emissions.csv` file in the working directory. The country code `NL` (Netherlands) allows codecarbon to use the local electricity grid's carbon intensity factor. Fun fact: increasingly expected in computational neuroscience methods sections!
-
-> This is independent of `--notrack` (which disables the sending of anonymised usage statistics to the fMRIprep developers). Both can coexist: `--track-carbon` = local carbon accounting; `--notrack` = no phone-home telemetry.
 
 ### `--write-graph`
 Generates a visual representation of the entire nipype workflow as a `.dot` file (Graphviz format) and renders it to a PNG. Saved in the working directory under `fmriprep_wf/graph.png`. Useful for understanding exactly what fMRIprep does under the hood — highly recommended for teaching.
@@ -241,13 +291,21 @@ Slice timing correction compensates for the fact that different slices in a volu
 import json, numpy as np
 from pathlib import Path
 
-tr = 2.0          # your TR in seconds
-n_slices = 32     # your number of slices
-# Philips interleaved ascending: odd slices first, then even
-interleaved_order = list(range(0, n_slices, 2)) + list(range(1, n_slices, 2))
-slice_times = [interleaved_order.index(i) * (tr / n_slices) for i in range(n_slices)]
+tr = 2.2          # your TR in seconds
+n_slices = 40     # your number of slices
+
+# Sequential ascending (regular up) — slice 0 first, going up
+slice_times = [i * (tr / n_slices) for i in range(n_slices)]
+
+# # Sequential descending (regular down) — top slice first, going down
+# slice_times = [(n_slices - 1 - i) * (tr / n_slices) for i in range(n_slices)]
+
+# # Interleaved ascending (Philips default for some protocols) — odds then evens
+# interleaved_order = list(range(0, n_slices, 2)) + list(range(1, n_slices, 2))
+# slice_times = [interleaved_order.index(i) * (tr / n_slices) for i in range(n_slices)]
 
 bids_root = Path("/data03/MRI_hackaton_data/Data_collection/bids")
+
 for json_file in bids_root.rglob("*_bold.json"):
     with open(json_file) as f:
         sidecar = json.load(f)
