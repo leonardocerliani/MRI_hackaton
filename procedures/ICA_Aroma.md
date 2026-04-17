@@ -37,7 +37,7 @@ fnirt --in=highres.nii.gz \
 
 
 # Run aroma
-python2.7 <path>/ICA_AROMA.py \
+python <path>/ICA_AROMA.py \
     -in mc/example_func_mcf.nii.gz \
     -out ICA_AROMA \
     -mc mc/example_func_mcf.par \

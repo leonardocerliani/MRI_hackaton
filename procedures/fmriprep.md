@@ -91,6 +91,25 @@ This is specific to our windoze network-mounted disk condition/curse.
 >
 > ⚠️ **YOU SHOULD DELETE THE WORK_DIR SOON AFTER FMRIPREP HAS FINISHED** ⚠️
 
+## Be considerate about the use of shared computational resources
+We will often want to run fmriprep on dozens or hundreds of subjects. However we are not at NASA or CERN, and resources are limited. We should be considerate about not clogging storm so that other colleagues have no more resources available.
+
+There are two parameters that can be used for this:
+`--nprocs` : how many workflow **nodes** can be run in parallel (# of workers)
+`--omp-nthreads` : how many threads per worker (e.g. for ANTs/ITK threading)
+
+This should be evaluated in each case. For instance:
+
+### Storm is quite free
+- `--nprocs` = 12 : I will run 12 nodes at the same time
+- `--omp-nthreads` 4 : I will allow 4 threads for each node
+- in total, I will occupy ~ 66% of the computing resources (48 out of 72 total threads)
+
+### Storm is quite busy or expected to be busy soon
+- `--nprocs` = 5 : I will run 3 nodes at the same time
+- `--omp-nthreads` 3 : I will allow 2 threads for each node
+- in total, I will occupy ~ 20% of the computing resources (15 out of72 total threads)
+
 
 ## The fMRIprep command
 
@@ -109,11 +128,12 @@ work_dir="./fmriprep_work_MASSIVE_DELETE_ASAP"
 # Some users may not have FREESURFER_HOME set in their environment
 FREESURFER_HOME="/usr/local/freesurfer"
 
-# ── Parallelism ────────────────────────────────────────────────────────────
-# Number of CPU cores for this fmriprep call.
-# If N people run fmriprep simultaneously: nprocs ≈ total_cores / N
-# Storm has 32 cores; with 4 people running at once, use nprocs=7 or 8.
-nprocs=7
+# ── Parallelism ──────────────────────────────────────────────────────
+# --nprocs:       workflow-level parallelism (independent nodes at once)
+# --omp-nthreads: thread-level parallelism per process (ANTs, ITK)
+# Total threads ≈ nprocs × omp-nthreads
+nprocs=5
+omp-nthreads=3
 
 # ── Run fMRIprep ───────────────────────────────────────────────────────────
 fmriprep-docker \
@@ -129,6 +149,7 @@ fmriprep-docker \
     --dvars-spike-threshold 1.5 \
     --ignore slicetiming \
     --nprocs ${nprocs} \
+    --omp-nthreads ${omp_nthreads} \
     --write-graph \
     --notrack \
     -w ${work_dir}

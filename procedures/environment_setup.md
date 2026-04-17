@@ -83,6 +83,20 @@ TODO - We will need to make sure that they are in the MNI space that fmriprep us
 
 # Useful stuff
 
+## Serving remote HTML reports on your laptop
+Several tools we will use (fmriprep, mriqc, Feat) produce reports in HTML pages. In order to efficiently inspect them on your laptop, you can use this procedure:
+
+- choose your favourite number between `9000..9999` (in my case `9999`)
+- go to the directory containing the html on storm and issue from the terminal:
+
+```bash
+python -m http.server 9999
+```
+- open VS on storm (not necessarily in the same directory) and open the port you chose (e.g. 9999) in the terminal inside VS code
+- open your laptop browser to `localhost:9999`
+- enjoy the view
+
+
 ## tmux — keeping jobs alive after disconnection
 
 `tmux` creates persistent terminal sessions on Storm that survive network disconnections. You start a session, detach from it (it keeps running in the background), and reattach to it later from any terminal — even from a completely new SSH connection.
