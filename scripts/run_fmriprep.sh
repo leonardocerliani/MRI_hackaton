@@ -38,11 +38,12 @@ fi
 FREESURFER_HOME="/usr/local/freesurfer"
 
 
-# ── Parallelism ────────────────────────────────────────────────────────────
-# Number of CPU cores for this fmriprep call.
-# If N people run fmriprep simultaneously: nprocs ≈ total_cores / N
-# Storm has 32 cores; with 4 people running at once, use nprocs=7 or 8.
-nprocs=7
+# ── Parallelism ──────────────────────────────────────────────────────
+# --nprocs:       workflow-level parallelism (independent nodes at once)
+# --omp-nthreads: thread-level parallelism per process (ANTs, ITK)
+# Total threads ≈ nprocs × omp-nthreads
+nprocs=5
+omp-nthreads=3
 
 
 echo "=== fMRIprep started: $(date) ==="
@@ -61,6 +62,7 @@ fmriprep-docker \
     --dvars-spike-threshold 1.5 \
     --ignore slicetiming \
     --nprocs ${nprocs} \
+    --omp-nthreads ${omp_nthreads} \
     --write-graph \
     --notrack \
     -w ${work_dir}
