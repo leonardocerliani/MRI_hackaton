@@ -49,7 +49,9 @@ fi
 
 echo "  ✓ Counts match — copying synthstrip brains over T1w files"
 find "${bids_root}" -type f -name '*ORIG_T1w_brain.nii.gz' | while read orig_brain; do
-    t1w="${orig_brain/ORIG_T1w_brain.nii.gz/T1w.nii.gz}"
+    # orig_brain lives in .../anat/ORIGINAL_T1W/  →  T1w lives in .../anat/
+    t1w="${orig_brain/\/ORIGINAL_T1W\//\/}"          # remove /ORIGINAL_T1W/ from path
+    t1w="${t1w/ORIG_T1w_brain.nii.gz/T1w.nii.gz}"   # fix filename
     cp "${orig_brain}" "${t1w}"
     echo "  $(basename ${t1w})"
 done

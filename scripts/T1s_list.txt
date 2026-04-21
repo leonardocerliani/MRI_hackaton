@@ -1,7 +1,0 @@
-/data03/MRI_hackaton_data/Data_collection/bids/sub-gutsaumc0010/ses-01/anat/sub-gutsaumc0010_ses-01_acq-ses01_T1w.nii.gz
-/data03/MRI_hackaton_data/Data_collection/bids/sub-gutsaumc0011/ses-01/anat/sub-gutsaumc0011_ses-01_acq-ses01_T1w.nii.gz
-/data03/MRI_hackaton_data/Data_collection/bids/sub-gutsaumc0012/ses-01/anat/sub-gutsaumc0012_ses-01_acq-ses01_T1w.nii.gz
-/data03/MRI_hackaton_data/Data_collection/bids/sub-gutsaumc0014/ses-01/anat/sub-gutsaumc0014_ses-01_acq-ses01_T1w.nii.gz
-/data03/MRI_hackaton_data/Data_collection/bids/sub-gutsaumc0015/ses-01/anat/sub-gutsaumc0015_ses-01_acq-ses01_T1w.nii.gz
-/data03/MRI_hackaton_data/Data_collection/bids/sub-gutsaumc0016/ses-01/anat/sub-gutsaumc0016_ses-01_acq-ses01_T1w.nii.gz
-/data03/MRI_hackaton_data/Data_collection/bids/sub-gutsaumc0017/ses-01/anat/sub-gutsaumc0017_ses-01_acq-ses01_T1w.nii.gz

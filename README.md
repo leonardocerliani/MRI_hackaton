@@ -281,7 +281,7 @@ The idea of running synthstrip now is to prepare in case fmriprep returns an uns
 
 1. `cp *T1w.nii.gz` -> `*ORIG_T1w.nii.gz`
 
-2. add `**/*ORIG*.nii.gz` to `.bidsignore` so that the bidsvalidator is happy
+2. add `**/*ORIG*` to `.bidsignore` so that the bidsvalidator is happy
 
 3. run fmriprep with the original `*T1w.nii.gz`
 
@@ -315,8 +315,11 @@ find "${bids_root}" -type f -name "*T1w.nii.gz" ! -name "*ORIG*" > T1s_list.txt
 xargs -a T1s_list.txt -P ${n_parallel_processes} -I {} bash -c '
     f="{}"
 
-    # Make a cp of the original T1w (only first pass)
-    ORIG="${f/T1w.nii.gz/ORIG_T1w.nii.gz}"
+    # Store ORIG files in ORIGINAL_T1W/ (ignored by bidsvalidator via **/*ORIG* in .bidsignore)
+    anat_dir=$(dirname "${f}")
+    orig_dir="${anat_dir}/ORIGINAL_T1W"
+    mkdir -p "${orig_dir}"
+    ORIG="${orig_dir}/$(basename ${f/T1w.nii.gz/ORIG_T1w.nii.gz})"
     [ ! -f "${ORIG}" ] && cp "${f}" "${ORIG}"
 
     out_img="${ORIG/.nii.gz/_brain.nii.gz}"
