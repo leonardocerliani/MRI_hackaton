@@ -62,7 +62,7 @@ So 6 cosine regressors are needed. The exact number varies by subject if runs ha
 
 ## The DCT basis formula
 
-Following SPM's `spm_dctmtx.m`:
+Following SPM's [`spm_dctmtx.m`](https://github.com/spm/spm/blob/main/spm_dctmtx.m):
 
 For `k = 1, 2, ..., n_basis` and timepoint `j = 0, 1, ..., N-1`:
 
