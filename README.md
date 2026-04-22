@@ -347,12 +347,24 @@ To generate confounds.tsv file + registration and fmri 4D in MNI using ANTs.
 
 The procedure is described in details in the [fmriprep.md](./procedures/fmriprep.md) document.
 
-# 04 bis. fMRIprep with synthstrip output
-If the skull stripping by ANTs/fmriprep is not satisfactory, we re-run fmriprep using the output of synthstrip. This can be achieved by:
-- overwriting the original `*T1w.nii.gz` with the `ORIG_T1w_brain.nii.gz`
-- instructing fmriprep _not_ to run skullstrip
+Everything is handled by the unified `scripts/run_fmriprep.sh` script. Before running it, set the two key parameters at the top:
 
-All this is done in the `run_fmriprep_skullstrip.sh` script. The output derivatives will be in `fmriprep_synthstrip`.
+```bash
+SKULL_STRIP_PROCEDURE="synthstrip"   # "synthstrip"  or  "fmriprep"
+deriv_root="/data03/.../fmriprep_synthstrip"   # adjust output directory accordingly
+```
+
+| `SKULL_STRIP_PROCEDURE` | What happens | `--skull-strip-t1w` |
+|------------------------|--------------|---------------------|
+| `synthstrip` | copies `ORIGINAL_T1W/*_ORIG_T1w_brain.nii.gz` → `anat/*_T1w.nii.gz` | `skip` |
+| `fmriprep`   | restores `ORIGINAL_T1W/*_ORIG_T1w.nii.gz` → `anat/*_T1w.nii.gz` | `force` |
+
+The script is **idempotent**: you can switch between modes at any time because the original full-head T1w is always safe in `ORIGINAL_T1W/` and is never overwritten. Subjects are processed in batches of `batch_size` with the `work_dir` cleaned between each batch to manage disk space.
+
+```bash
+nohup ./scripts/run_fmriprep.sh >> fmriprep.log 2>&1 &
+tail -f fmriprep.log
+```
 
 
 # Additional preprocessing steps after fmriprep
