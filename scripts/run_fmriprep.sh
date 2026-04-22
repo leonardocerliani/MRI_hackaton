@@ -49,9 +49,6 @@ freesurfer_license="${FREESURFER_HOME}/license.txt"
 nprocs=5
 omp_nthreads=3
 
-# MNI output resolution (1 / 2 / 3 mm)
-MNI_res=2
-
 
 # ════════════════════════════════════════════════════════════════════════════
 # ── Do not touch anything below! ───────────────────────────────────────────
@@ -166,7 +163,7 @@ while [ ${i} -lt ${n_total} ]; do
         --no-tty \
         --fs-no-reconall \
         --fs-license-file ${freesurfer_license} \
-        --output-spaces MNI152NLin2009cAsym:res-${MNI_res} \
+        --output-spaces MNI152NLin2009cAsym:res-2 \
         --fd-spike-threshold 0.5 \
         --dvars-spike-threshold 1.5 \
         --skull-strip-t1w ${skull_strip_opt} \

@@ -1,0 +1,12 @@
+{
+  "generated": "2026-04-22 16:02:29",
+  "deriv_dir": "//data03/MRI_hackaton_data/Data_collection/fmriprep",
+  "output_dir": "//data00/MRI_hackaton/scripts",
+  "selected_tasks": "rest",
+  "confound_tsv_patterns": ["_desc-confounds_timeseries.tsv", "_space-MNI152NLin2009cAsym_res-2_desc-cosine180s_confounds.tsv"],
+  "selected_columns": ["a_comp_cor_00", "a_comp_cor_01", "a_comp_cor_02", "a_comp_cor_04", "global_signal", "global_signal_derivative1", "global_signal_power2"],
+  "n_parallel": 10,
+  "n_subjects": 7,
+  "n_confound_regressors": 7,
+  "subjects": ["sub-gutsaumc0010", "sub-gutsaumc0011", "sub-gutsaumc0012", "sub-gutsaumc0014", "sub-gutsaumc0015", "sub-gutsaumc0016", "sub-gutsaumc0017"]
+}
