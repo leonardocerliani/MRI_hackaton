@@ -559,12 +559,6 @@ The first run will pull the `afni/afni` image from Docker Hub if not already cac
 parcellation step to average timeseries according to ROIs
 
 
-# Preprocessing with fsl Feat
-
-
-# ICA Aroma
-
-
 
 # Useful Snippets
 
