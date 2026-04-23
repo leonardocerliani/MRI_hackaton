@@ -347,7 +347,9 @@ To generate confounds.tsv file + registration and fmri 4D in MNI using ANTs.
 ## Adding slice timing information
 If you have PARREC raw data, you might need to add slice timing information. 
 
-To do so you can use the `scripts/add_slice_timing.py` script (no venv needed). You will need to provide:
+To do so you can use the `scripts/add_slice_timing.py` script ([source](https://github.com/JuditCampdepadros/fMRI_prep_pipeline/blob/main/TUT/05_full_pipeline/add_slice_timing.py), slightly modified, no venv needed). 
+
+You will need to provide:
 
 - the bids root directory
 - the TR in seconds
