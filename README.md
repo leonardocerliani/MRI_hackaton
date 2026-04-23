@@ -341,10 +341,29 @@ Now you can use the [niivue plugin for VS code](https://marketplace.visualstudio
 ![](./procedures/assets/niivue.png)
 
 
-
 # 04. fMRIprep 
 To generate confounds.tsv file + registration and fmri 4D in MNI using ANTs.
 
+## Adding slice timing information
+If you have PARREC raw data, you might need to add slice timing information. 
+
+To do so you can use the `scripts/add_slice_timing.py` script (no venv needed). You will need to provide:
+
+- the bids root directory
+- the TR in seconds
+- the # of slices (`fslinfo bold.nii.gz | grep ^dim3` for regular axial acquisitions)
+- the order of acquisition: `ascending`, `descending` or `interleaved`
+
+Usage example:
+```bash
+python3 add_slice_timing.py \
+    /data03/MRI_hackaton_data/Data_collection/bids \
+    --tr 2.2 --nslices 40 \
+    --order ascending
+```
+
+
+## Running fmriprep
 The procedure is described in details in the [fmriprep.md](./procedures/fmriprep.md) document.
 
 Everything is handled by the unified `scripts/run_fmriprep.sh` script. Before running it, set the two key parameters at the top:
