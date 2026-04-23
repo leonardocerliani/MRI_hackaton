@@ -1,6 +1,6 @@
 # MRI Hackaton
 
-_LC 2026-04-19_
+_LC last update: 2026-04-23_
 
 
 # Organization of code + data
