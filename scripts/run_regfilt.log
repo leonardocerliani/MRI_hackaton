@@ -1,0 +1,23 @@
+nohup: ignoring input
+xargs: warning: options --max-args and --replace/-I/-i are mutually exclusive, ignoring previous --max-args value
+=== sub-gutsaumc0011: started ===
+=== sub-gutsaumc0010: started ===
+=== sub-gutsaumc0012: started ===
+=== sub-gutsaumc0014: started ===
+=== sub-gutsaumc0015: started ===
+  sub-gutsaumc0012: sub-gutsaumc0012_ses-01_task-rest_space-MNI152NLin2009cAsym_res-2_desc-preproc_bold.nii.gz
+  sub-gutsaumc0011: sub-gutsaumc0011_ses-01_task-rest_space-MNI152NLin2009cAsym_res-2_desc-preproc_bold.nii.gz
+  sub-gutsaumc0014: sub-gutsaumc0014_ses-01_task-rest_space-MNI152NLin2009cAsym_res-2_desc-preproc_bold.nii.gz
+  sub-gutsaumc0015: sub-gutsaumc0015_ses-01_task-rest_space-MNI152NLin2009cAsym_res-2_desc-preproc_bold.nii.gz
+  sub-gutsaumc0010: sub-gutsaumc0010_ses-01_task-rest_space-MNI152NLin2009cAsym_res-2_desc-preproc_bold.nii.gz
+=== sub-gutsaumc0015: done ===
+=== sub-gutsaumc0016: started ===
+=== sub-gutsaumc0010: done ===
+=== sub-gutsaumc0017: started ===
+  sub-gutsaumc0016: sub-gutsaumc0016_ses-01_task-rest_space-MNI152NLin2009cAsym_res-2_desc-preproc_bold.nii.gz
+=== sub-gutsaumc0012: done ===
+=== sub-gutsaumc0011: done ===
+=== sub-gutsaumc0014: done ===
+  sub-gutsaumc0017: sub-gutsaumc0017_ses-01_task-rest_space-MNI152NLin2009cAsym_res-2_desc-preproc_bold.nii.gz
+=== sub-gutsaumc0016: done ===
+=== sub-gutsaumc0017: done ===

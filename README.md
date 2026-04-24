@@ -473,6 +473,9 @@ Once the user has made her selection, the app generates a confound `.txt` file i
 
 The configuration is also saved in a json file `denoising_config.json`, so that different configurations can be generated (and reloaded in the app) for checking the selection and to run different iterations with different selections of confounds.
 
+**IT IS VERY IMPORTANT THAT THE CONFIG AND SCRIPT.SH ARE _NOT_ SAVED IN `/data00` AS THIS WOULD RAISE A PERMISSION ERROR AND BREAK THE APP. SAVE THEM E.G. IN `/data03`**. I will think about how to cope with this in the future.
+
+
 ![](./procedures/assets/fmri_denoiser.gif)
 
 # 07. Grand Mean scaling
@@ -519,6 +522,10 @@ This runs `n_parallel` subjects simultaneously; within each subject all BOLD fil
 
 
 # 08. Smoothing
+
+**NB** In the latest version, smoothing is carried out with `run_smoothing.sh` which in turns uses `smoothing_engine.sh`. In this way different preprocessed bold (e.g. different task) can have a specific preprocessed image smoothed - e.g. the intial derivative `preproc_bold` vs the scaled version `scaled_bold`.
+
+---
 
 Spatial smoothing increases SNR and helps account for residual inter-subject registration differences. We use [`3dBlurToFWHM`](https://afni.nimh.nih.gov/pub/dist/doc/program_help/3dBlurToFWHM.html) from AFNI rather than a fixed-kernel tool (e.g. `fslmaths -s`).
 

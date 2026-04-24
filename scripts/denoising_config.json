@@ -1,0 +1,12 @@
+{
+  "generated": "2026-04-24 13:19:03",
+  "deriv_dir": "//data03/MRI_hackaton_data/Data_collection/fmriprep_synthstrip_NO_CSF",
+  "output_dir": "//data00/MRI_hackaton/scripts",
+  "selected_tasks": "rest",
+  "confound_tsv_patterns": "_desc-confounds_timeseries.tsv",
+  "selected_columns": ["a_comp_cor_02", "a_comp_cor_04", "a_comp_cor_06"],
+  "n_parallel": 5,
+  "n_subjects": 7,
+  "n_confound_regressors": 3,
+  "subjects": ["sub-gutsaumc0010", "sub-gutsaumc0011", "sub-gutsaumc0012", "sub-gutsaumc0014", "sub-gutsaumc0015", "sub-gutsaumc0016", "sub-gutsaumc0017"]
+}

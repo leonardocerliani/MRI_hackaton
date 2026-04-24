@@ -640,6 +640,12 @@ server <- function(input, output, session) {
             "_desc-selected_confounds.txt"
           )
           write_delim(mat, out_path, delim = " ", col_names = FALSE, progress = FALSE)
+          csv_path <- str_replace(
+            bold_path,
+            "_desc-preproc_bold\\.nii\\.gz$",
+            "_desc-selected_confounds.csv"
+          )
+          write_csv(mat, csv_path, progress = FALSE)
           written <- c(written, out_path)
           n_done  <- n_done + 1
         } else {
