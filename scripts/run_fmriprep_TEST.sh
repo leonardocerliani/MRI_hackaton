@@ -1,13 +1,16 @@
 #!/bin/bash
 
-# run_fmriprep.sh
+# run_fmriprep_TEST.sh
 #
-# Unified fMRIprep launcher with batch processing.
+# TEST version of the fMRIprep launcher — runs fast on a single subject.
 #
-# Processes subjects in batches (cleaning the work directory between each)
-# and supports two skull-stripping strategies selected by SKULL_STRIP_PROCEDURE:
+# Supports three skull-stripping strategies selected by SKULL_STRIP_PROCEDURE:
 #
 #   "synthstrip"  — use the synthstrip-generated brain (ORIG_T1w_brain)
+#                   → copies ORIGINAL_T1W/*_ORIG_T1w_brain.nii.gz → anat/*_T1w.nii.gz
+#                   → runs fmriprep with --skull-strip-t1w auto
+#
+#   "auto"        — use the synthstrip-generated brain (same pre-flight as "synthstrip")
 #                   → copies ORIGINAL_T1W/*_ORIG_T1w_brain.nii.gz → anat/*_T1w.nii.gz
 #                   → runs fmriprep with --skull-strip-t1w auto
 #
@@ -15,39 +18,35 @@
 #                   → restores the full-head T1w from ORIGINAL_T1W/*_ORIG_T1w.nii.gz
 #                   → runs fmriprep with --skull-strip-t1w force
 #
-# NB: the script is idempotent: the user can run the script with the `fmriprep` option even 
-# **after** having run it with the `synthstrip` option, since the original T1w image 
-# is restored from the ORIGINAL_T1W folder, even if in the previous run (with the `synthstrip` option) 
-# it had been overwritten by the ORIG_T1w_brain.nii.gz file
-#
 # ⚠️ Do NOT run this script directly — launch in the background: ⚠️
-# nohup ./run_fmriprep.sh >> fmriprep.log 2>&1 &
-# Then monitor with:  tail -f fmriprep.log
+# nohup ./run_fmriprep_TEST.sh >> fmriprep_TEST.log 2>&1 &
+# Then monitor with:  tail -f fmriprep_TEST.log
 
 
 # ════════════════════════════════════════════════════════════════════════════
 # ── User parameters — edit everything in this section ──────────────────────
 # ════════════════════════════════════════════════════════════════════════════
 
-SKULL_STRIP_PROCEDURE="synthstrip"   # "synthstrip"  or  "fmriprep"
+SKULL_STRIP_PROCEDURE="auto"         # "synthstrip", "auto", or "fmriprep"
 
 bids_root="/data03/MRI_hackaton_data/Data_collection/bids"
-deriv_root="/data03/MRI_hackaton_data/Data_collection/fmriprep_synthstrip_NO_CSF"
+deriv_root="/data03/MRI_hackaton_data/Data_collection/fmriprep_synthstrip"
 work_dir="./fmriprep_work_MASSIVE_DELETE_ASAP"
 list_subj="./list_subj.txt"  # one subject ID per line (e.g. sub-gutsaumc0010)
 
-batch_size=10                        # subjects per fmriprep call
+max_subjects=1                       # number of subjects to process (0 = all)
+batch_size=1                         # subjects per fmriprep call
 
 # FreeSurfer
 FREESURFER_HOME="/usr/local/freesurfer"
 freesurfer_license="${FREESURFER_HOME}/license.txt"
 
-# Parallelism
+# Parallelism — 32 cores total for a single subject
 # --nprocs:       workflow-level parallelism (independent nodes run at once)
 # --omp-nthreads: thread-level parallelism per process (ANTs, ITK)
-# Total threads ≈ nprocs × omp-nthreads
-nprocs=10
-omp_nthreads=3
+# Total threads ≈ nprocs × omp-nthreads  →  8 × 4 = 32
+nprocs=2
+omp_nthreads=40
 
 # MNI Template
 MNI_template="MNI152NLin2009cAsym:res-2"
@@ -63,17 +62,19 @@ if [ -t 1 ]; then
     echo "  ⚠️  Do not run this script directly."
     echo "  fMRIprep is a long-running job. Launch it in the background:"
     echo ""
-    echo "      nohup ./run_fmriprep.sh >> fmriprep.log 2>&1 &"
+    echo "      nohup ./run_fmriprep_TEST.sh >> fmriprep_TEST.log 2>&1 &"
     echo ""
-    echo "  Then monitor with:  tail -f fmriprep.log"
+    echo "  Then monitor with:  tail -f fmriprep_TEST.log"
     echo ""
     exit 1
 fi
 
 
 # ── Validate SKULL_STRIP_PROCEDURE ──────────────────────────────────────────
-if [ "${SKULL_STRIP_PROCEDURE}" != "synthstrip" ] && [ "${SKULL_STRIP_PROCEDURE}" != "fmriprep" ]; then
-    echo "⚠️  SKULL_STRIP_PROCEDURE must be 'synthstrip' or 'fmriprep'."
+if [ "${SKULL_STRIP_PROCEDURE}" != "synthstrip" ] && \
+   [ "${SKULL_STRIP_PROCEDURE}" != "auto" ] && \
+   [ "${SKULL_STRIP_PROCEDURE}" != "fmriprep" ]; then
+    echo "⚠️  SKULL_STRIP_PROCEDURE must be 'synthstrip', 'auto', or 'fmriprep'."
     echo "    Got: '${SKULL_STRIP_PROCEDURE}'"
     exit 1
 fi
@@ -81,9 +82,9 @@ fi
 # ── Pre-flight: prepare T1w files for all subjects ──────────────────────────
 n_t1w=$(find "${bids_root}" -type f -name '*T1w.nii.gz' ! -name '*ORIG*' | wc -l)
 
-if [ "${SKULL_STRIP_PROCEDURE}" = "synthstrip" ]; then
+if [ "${SKULL_STRIP_PROCEDURE}" = "synthstrip" ] || [ "${SKULL_STRIP_PROCEDURE}" = "auto" ]; then
 
-    echo "=== Pre-flight [synthstrip]: brain → T1w ==="
+    echo "=== Pre-flight [${SKULL_STRIP_PROCEDURE}]: brain → T1w ==="
     n_orig=$(find "${bids_root}" -type f -name '*ORIG_T1w_brain.nii.gz' | wc -l)
     echo "  T1w files         : ${n_t1w}"
     echo "  ORIG_T1w_brain    : ${n_orig}"
@@ -103,7 +104,11 @@ if [ "${SKULL_STRIP_PROCEDURE}" = "synthstrip" ]; then
         echo "  ${t1w_name}"
     done
 
-    skull_strip_opt="auto"
+    if [ "${SKULL_STRIP_PROCEDURE}" = "synthstrip" ]; then
+        skull_strip_opt="auto"
+    else
+        skull_strip_opt="auto"
+    fi
 
 elif [ "${SKULL_STRIP_PROCEDURE}" = "fmriprep" ]; then
 
@@ -136,6 +141,12 @@ echo "=== Pre-flight done — skull_strip_opt: ${skull_strip_opt} ==="
 
 # ── Batch loop ───────────────────────────────────────────────────────────────
 mapfile -t all_subjects < "${list_subj}"
+
+# Apply max_subjects limit (0 = process all)
+if [ "${max_subjects}" -gt 0 ]; then
+    all_subjects=("${all_subjects[@]:0:${max_subjects}}")
+fi
+
 n_total=${#all_subjects[@]}
 n_batches=$(( (n_total + batch_size - 1) / batch_size ))
 

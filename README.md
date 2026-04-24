@@ -275,6 +275,8 @@ done
 # 03. Skullstripping with synthstrip
 [ref to 10_skull_stripping](https://github.com/leonardocerliani/GUTS_fmri_preproc/tree/main/TUT/10_skull_stripping)
 
+**NB: It was noted that if the option `--no-csf` is used, it causes `fast` segmentation to throw an error since it cannot initialize the kmeans for three classes. Therefore - for the sake of fmriprep - we need to run syntstrip _without_ the `--no-csf` option**
+
 [Synthstrip](https://surfer.nmr.mgh.harvard.edu/docs/synthstrip/) is an alternative to other sw for skull stripping (such as `bet` and `ANTs`). It is very recent and it uses DNN. It's superfast and it comes with freesurfer, but we will use the [docker version](https://hub.docker.com/r/freesurfer/synthstrip).
 
 The idea of running synthstrip now is to prepare in case fmriprep returns an unsatisfactory skull stripping. In that case, we will already have the skullstripped version of the T1w carried out with synthstrip, and we will be able to rerun it with the latter with minimal additional procedures. In brief:
@@ -329,8 +331,7 @@ xargs -a T1s_list.txt -P ${n_parallel_processes} -I {} bash -c '
         -i "${ORIG}" \
         -o "${out_img}" \
         -m "${out_mask}" \
-        -t 10 \
-        --no-csf
+        -t 10
 ' # <- note the closing quote
 
 rm T1s_list.txt
@@ -368,7 +369,12 @@ python3 add_slice_timing.py \
 ## Running fmriprep
 The procedure is described in details in the [fmriprep.md](./procedures/fmriprep.md) document.
 
-Everything is handled by the unified `scripts/run_fmriprep.sh` script. Before running it, set the two key parameters at the top:
+Everything is handled by the unified `scripts/run_fmriprep.sh` script. Before running it, make sure that:
+
+- you have activated the `vevn_MRI_hackaton` with the `fmriprep-docker` installed
+- you have the `list_subj.txt` in the $PWD
+- you are in the `scripts` directory
+- you have set the two key parameters at the top:
 
 ```bash
 SKULL_STRIP_PROCEDURE="synthstrip"   # "synthstrip"  or  "fmriprep"
