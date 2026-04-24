@@ -7,6 +7,7 @@
 # Monitor with:  tail -f smoothing.log
 
 
+
 # ════════════════════════════════════════════════════════════════════════════
 # ── User parameters — edit everything in this section ──────────────────────
 # ════════════════════════════════════════════════════════════════════════════
@@ -20,6 +21,12 @@ export list_subj="/data00/MRI_hackaton/scripts/list_subj.txt"
 # ════════════════════════════════════════════════════════════════════════════
 # ── Add one line per task/desc combination to smooth ───────────────────────
 # ════════════════════════════════════════════════════════════════════════════
+
+if [ ! -f "${SCRIPT_DIR}/smoothing_engine.sh" ]; then
+    echo "⚠️  smoothing_engine.sh not found in ${SCRIPT_DIR}"
+    exit 1
+fi
+
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
