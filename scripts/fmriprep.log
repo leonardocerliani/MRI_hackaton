@@ -11790,3 +11790,881 @@ bids-validator@1.14.10
 	 [Node] Setting-up "_denoise1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0015_ses_01_wf/anat_fit_wf/anat_template_wf/denoise/mapflow/_denoise1".
 260601-13:15:02,224 nipype.workflow INFO:
 	 [Node] Executing "_denoise1" <nipype.interfaces.ants.segmentation.DenoiseImage>
+260601-13:15:20,895 nipype.workflow INFO:
+	 [Node] Finished "_n4_correct0", elapsed time 116.700181s.
+260601-13:15:22,221 nipype.workflow INFO:
+	 [Node] Setting-up "_n4_correct1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0010_ses_01_wf/anat_fit_wf/anat_template_wf/n4_correct/mapflow/_n4_correct1".
+260601-13:15:22,223 nipype.workflow INFO:
+	 [Node] Executing "_n4_correct1" <nipype.interfaces.ants.segmentation.N4BiasFieldCorrection>
+260601-13:15:23,149 nipype.workflow INFO:
+	 [Node] Finished "_denoise1", elapsed time 58.925182s.
+260601-13:15:24,206 nipype.workflow INFO:
+	 [Node] Setting-up "_denoise0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0014_ses_01_wf/anat_fit_wf/anat_template_wf/denoise/mapflow/_denoise0".
+260601-13:15:24,207 nipype.workflow INFO:
+	 [Node] Cached "_denoise0" - collecting precomputed outputs
+260601-13:15:24,207 nipype.workflow INFO:
+	 [Node] "_denoise0" found cached.
+260601-13:15:24,208 nipype.workflow INFO:
+	 [Node] Setting-up "_denoise1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0014_ses_01_wf/anat_fit_wf/anat_template_wf/denoise/mapflow/_denoise1".
+260601-13:15:24,208 nipype.workflow INFO:
+	 [Node] Cached "_denoise1" - collecting precomputed outputs
+260601-13:15:24,209 nipype.workflow INFO:
+	 [Node] "_denoise1" found cached.
+260601-13:15:24,681 nipype.workflow INFO:
+	 [Node] Finished "_denoise0", elapsed time 54.453599s.
+260601-13:15:26,224 nipype.workflow INFO:
+	 [Node] Setting-up "_denoise0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0016_ses_01_wf/anat_fit_wf/anat_template_wf/denoise/mapflow/_denoise0".
+260601-13:15:26,224 nipype.workflow INFO:
+	 [Node] Setting-up "_denoise1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0016_ses_01_wf/anat_fit_wf/anat_template_wf/denoise/mapflow/_denoise1".
+260601-13:15:26,225 nipype.workflow INFO:
+	 [Node] Executing "_denoise0" <nipype.interfaces.ants.segmentation.DenoiseImage>
+260601-13:15:26,225 nipype.workflow INFO:
+	 [Node] Executing "_denoise1" <nipype.interfaces.ants.segmentation.DenoiseImage>
+260601-13:15:56,749 nipype.workflow INFO:
+	 [Node] Finished "_denoise1", elapsed time 54.524649s.
+260601-13:15:58,242 nipype.workflow INFO:
+	 [Node] Setting-up "_denoise0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0015_ses_01_wf/anat_fit_wf/anat_template_wf/denoise/mapflow/_denoise0".
+260601-13:15:58,243 nipype.workflow INFO:
+	 [Node] Cached "_denoise0" - collecting precomputed outputs
+260601-13:15:58,243 nipype.workflow INFO:
+	 [Node] "_denoise0" found cached.
+260601-13:15:58,244 nipype.workflow INFO:
+	 [Node] Setting-up "_denoise1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0015_ses_01_wf/anat_fit_wf/anat_template_wf/denoise/mapflow/_denoise1".
+260601-13:15:58,245 nipype.workflow INFO:
+	 [Node] Cached "_denoise1" - collecting precomputed outputs
+260601-13:15:58,245 nipype.workflow INFO:
+	 [Node] "_denoise1" found cached.
+260601-13:16:00,233 nipype.workflow INFO:
+	 [Node] Setting-up "_denoise0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0017_ses_01_wf/anat_fit_wf/anat_template_wf/denoise/mapflow/_denoise0".
+260601-13:16:00,235 nipype.workflow INFO:
+	 [Node] Executing "_denoise0" <nipype.interfaces.ants.segmentation.DenoiseImage>
+260601-13:16:14,906 nipype.workflow INFO:
+	 [Node] Finished "_denoise0", elapsed time 48.680365s.
+260601-13:16:15,386 nipype.workflow INFO:
+	 [Node] Finished "_denoise1", elapsed time 49.159614s.
+260601-13:16:16,270 nipype.workflow INFO:
+	 [Node] Setting-up "_denoise0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0016_ses_01_wf/anat_fit_wf/anat_template_wf/denoise/mapflow/_denoise0".
+260601-13:16:16,271 nipype.workflow INFO:
+	 [Node] Setting-up "_denoise1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0017_ses_01_wf/anat_fit_wf/anat_template_wf/denoise/mapflow/_denoise1".
+260601-13:16:16,271 nipype.workflow INFO:
+	 [Node] Cached "_denoise0" - collecting precomputed outputs
+260601-13:16:16,271 nipype.workflow INFO:
+	 [Node] "_denoise0" found cached.
+260601-13:16:16,272 nipype.workflow INFO:
+	 [Node] Setting-up "_denoise1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0016_ses_01_wf/anat_fit_wf/anat_template_wf/denoise/mapflow/_denoise1".
+260601-13:16:16,272 nipype.workflow INFO:
+	 [Node] Executing "_denoise1" <nipype.interfaces.ants.segmentation.DenoiseImage>
+260601-13:16:16,272 nipype.workflow INFO:
+	 [Node] Cached "_denoise1" - collecting precomputed outputs
+260601-13:16:16,272 nipype.workflow INFO:
+	 [Node] "_denoise1" found cached.
+260601-13:16:18,230 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0011_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform/mapflow/_anat_conform0".
+260601-13:16:18,230 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0011_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform/mapflow/_anat_conform1".
+260601-13:16:18,231 nipype.workflow INFO:
+	 [Node] Executing "_anat_conform1" <niworkflows.interfaces.images.Conform>
+260601-13:16:18,232 nipype.workflow INFO:
+	 [Node] Executing "_anat_conform0" <niworkflows.interfaces.images.Conform>
+260601-13:16:18,233 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0012_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform/mapflow/_anat_conform0".
+260601-13:16:18,236 nipype.workflow INFO:
+	 [Node] Executing "_anat_conform0" <niworkflows.interfaces.images.Conform>
+260601-13:16:19,157 nipype.workflow INFO:
+	 [Node] Finished "_anat_conform1", elapsed time 0.92485s.
+260601-13:16:19,267 nipype.workflow INFO:
+	 [Node] Finished "_anat_conform0", elapsed time 1.033779s.
+260601-13:16:19,413 nipype.workflow INFO:
+	 [Node] Finished "_anat_conform0", elapsed time 1.176287s.
+260601-13:16:20,210 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0012_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform/mapflow/_anat_conform1".
+260601-13:16:20,211 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0014_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform/mapflow/_anat_conform0".
+260601-13:16:20,212 nipype.workflow INFO:
+	 [Node] Executing "_anat_conform1" <niworkflows.interfaces.images.Conform>
+260601-13:16:20,213 nipype.workflow INFO:
+	 [Node] Executing "_anat_conform0" <niworkflows.interfaces.images.Conform>
+260601-13:16:20,213 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0011_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform/mapflow/_anat_conform0".
+260601-13:16:20,214 nipype.workflow INFO:
+	 [Node] Cached "_anat_conform0" - collecting precomputed outputs
+260601-13:16:20,214 nipype.workflow INFO:
+	 [Node] "_anat_conform0" found cached.
+260601-13:16:20,215 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0011_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform/mapflow/_anat_conform1".
+260601-13:16:20,216 nipype.workflow INFO:
+	 [Node] Cached "_anat_conform1" - collecting precomputed outputs
+260601-13:16:20,216 nipype.workflow INFO:
+	 [Node] "_anat_conform1" found cached.
+260601-13:16:21,202 nipype.workflow INFO:
+	 [Node] Finished "_anat_conform0", elapsed time 0.988022s.
+260601-13:16:21,424 nipype.workflow INFO:
+	 [Node] Finished "_anat_conform1", elapsed time 1.211454s.
+260601-13:16:22,213 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0012_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform/mapflow/_anat_conform0".
+260601-13:16:22,214 nipype.workflow INFO:
+	 [Node] Cached "_anat_conform0" - collecting precomputed outputs
+260601-13:16:22,214 nipype.workflow INFO:
+	 [Node] "_anat_conform0" found cached.
+260601-13:16:22,215 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0012_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform/mapflow/_anat_conform1".
+260601-13:16:22,216 nipype.workflow INFO:
+	 [Node] Cached "_anat_conform1" - collecting precomputed outputs
+260601-13:16:22,216 nipype.workflow INFO:
+	 [Node] "_anat_conform1" found cached.
+260601-13:16:22,234 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0014_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform/mapflow/_anat_conform1".
+260601-13:16:22,234 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0015_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform/mapflow/_anat_conform0".
+260601-13:16:22,236 nipype.workflow INFO:
+	 [Node] Executing "_anat_conform1" <niworkflows.interfaces.images.Conform>
+260601-13:16:22,236 nipype.workflow INFO:
+	 [Node] Executing "_anat_conform0" <niworkflows.interfaces.images.Conform>
+260601-13:16:23,173 nipype.workflow INFO:
+	 [Node] Finished "_anat_conform0", elapsed time 0.937341s.
+260601-13:16:23,203 nipype.workflow INFO:
+	 [Node] Finished "_anat_conform1", elapsed time 0.966643s.
+260601-13:16:24,218 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0014_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform/mapflow/_anat_conform0".
+260601-13:16:24,218 nipype.workflow INFO:
+	 [Node] Cached "_anat_conform0" - collecting precomputed outputs
+260601-13:16:24,218 nipype.workflow INFO:
+	 [Node] "_anat_conform0" found cached.
+260601-13:16:24,219 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0014_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform/mapflow/_anat_conform1".
+260601-13:16:24,220 nipype.workflow INFO:
+	 [Node] Cached "_anat_conform1" - collecting precomputed outputs
+260601-13:16:24,220 nipype.workflow INFO:
+	 [Node] "_anat_conform1" found cached.
+260601-13:16:24,237 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0015_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform/mapflow/_anat_conform1".
+260601-13:16:24,237 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0016_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform/mapflow/_anat_conform0".
+260601-13:16:24,239 nipype.workflow INFO:
+	 [Node] Executing "_anat_conform0" <niworkflows.interfaces.images.Conform>
+260601-13:16:24,239 nipype.workflow INFO:
+	 [Node] Executing "_anat_conform1" <niworkflows.interfaces.images.Conform>
+260601-13:16:25,181 nipype.workflow INFO:
+	 [Node] Finished "_anat_conform0", elapsed time 0.941724s.
+260601-13:16:25,415 nipype.workflow INFO:
+	 [Node] Finished "_anat_conform1", elapsed time 1.1747589999999999s.
+260601-13:16:26,218 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0015_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform/mapflow/_anat_conform0".
+260601-13:16:26,219 nipype.workflow INFO:
+	 [Node] Cached "_anat_conform0" - collecting precomputed outputs
+260601-13:16:26,219 nipype.workflow INFO:
+	 [Node] "_anat_conform0" found cached.
+260601-13:16:26,220 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0015_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform/mapflow/_anat_conform1".
+260601-13:16:26,220 nipype.workflow INFO:
+	 [Node] Cached "_anat_conform1" - collecting precomputed outputs
+260601-13:16:26,220 nipype.workflow INFO:
+	 [Node] "_anat_conform1" found cached.
+260601-13:16:26,240 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0016_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform/mapflow/_anat_conform1".
+260601-13:16:26,243 nipype.workflow INFO:
+	 [Node] Executing "_anat_conform1" <niworkflows.interfaces.images.Conform>
+260601-13:16:26,244 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform_xfm0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0011_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform_xfm/mapflow/_anat_conform_xfm0".
+260601-13:16:26,246 nipype.workflow INFO:
+	 [Node] Executing "_anat_conform_xfm0" <niworkflows.interfaces.freesurfer.PatchedLTAConvert>
+260601-13:16:26,381 nipype.workflow INFO:
+	 [Node] Finished "_anat_conform_xfm0", elapsed time 0.13428s.
+260601-13:16:27,290 nipype.workflow INFO:
+	 [Node] Finished "_anat_conform1", elapsed time 1.046589s.
+260601-13:16:28,215 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0016_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform/mapflow/_anat_conform0".
+260601-13:16:28,216 nipype.workflow INFO:
+	 [Node] Cached "_anat_conform0" - collecting precomputed outputs
+260601-13:16:28,216 nipype.workflow INFO:
+	 [Node] "_anat_conform0" found cached.
+260601-13:16:28,216 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0016_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform/mapflow/_anat_conform1".
+260601-13:16:28,217 nipype.workflow INFO:
+	 [Node] Cached "_anat_conform1" - collecting precomputed outputs
+260601-13:16:28,217 nipype.workflow INFO:
+	 [Node] "_anat_conform1" found cached.
+260601-13:16:28,242 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform_xfm1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0011_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform_xfm/mapflow/_anat_conform_xfm1".
+260601-13:16:28,242 nipype.workflow INFO:
+	 [Node] Setting-up "_n4_correct0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0011_ses_01_wf/anat_fit_wf/anat_template_wf/n4_correct/mapflow/_n4_correct0".
+260601-13:16:28,243 nipype.workflow INFO:
+	 [Node] Executing "_anat_conform_xfm1" <niworkflows.interfaces.freesurfer.PatchedLTAConvert>
+260601-13:16:28,244 nipype.workflow INFO:
+	 [Node] Executing "_n4_correct0" <nipype.interfaces.ants.segmentation.N4BiasFieldCorrection>
+260601-13:16:28,384 nipype.workflow INFO:
+	 [Node] Finished "_anat_conform_xfm1", elapsed time 0.140604s.
+260601-13:16:30,225 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform_xfm0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0011_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform_xfm/mapflow/_anat_conform_xfm0".
+260601-13:16:30,226 nipype.workflow INFO:
+	 [Node] Cached "_anat_conform_xfm0" - collecting precomputed outputs
+260601-13:16:30,226 nipype.workflow INFO:
+	 [Node] "_anat_conform_xfm0" found cached.
+260601-13:16:30,226 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform_xfm1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0011_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform_xfm/mapflow/_anat_conform_xfm1".
+260601-13:16:30,227 nipype.workflow INFO:
+	 [Node] Cached "_anat_conform_xfm1" - collecting precomputed outputs
+260601-13:16:30,227 nipype.workflow INFO:
+	 [Node] "_anat_conform_xfm1" found cached.
+260601-13:16:30,247 nipype.workflow INFO:
+	 [Node] Setting-up "_n4_correct1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0011_ses_01_wf/anat_fit_wf/anat_template_wf/n4_correct/mapflow/_n4_correct1".
+260601-13:16:30,249 nipype.workflow INFO:
+	 [Node] Executing "_n4_correct1" <nipype.interfaces.ants.segmentation.N4BiasFieldCorrection>
+260601-13:16:32,234 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform_xfm0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0012_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform_xfm/mapflow/_anat_conform_xfm0".
+260601-13:16:32,236 nipype.workflow INFO:
+	 [Node] Executing "_anat_conform_xfm0" <niworkflows.interfaces.freesurfer.PatchedLTAConvert>
+260601-13:16:32,369 nipype.workflow INFO:
+	 [Node] Finished "_anat_conform_xfm0", elapsed time 0.133288s.
+260601-13:16:34,336 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform_xfm1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0012_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform_xfm/mapflow/_anat_conform_xfm1".
+260601-13:16:34,337 nipype.workflow INFO:
+	 [Node] Executing "_anat_conform_xfm1" <niworkflows.interfaces.freesurfer.PatchedLTAConvert>
+260601-13:16:34,446 nipype.workflow INFO:
+	 [Node] Finished "_anat_conform_xfm1", elapsed time 0.108489s.
+260601-13:16:36,224 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform_xfm0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0012_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform_xfm/mapflow/_anat_conform_xfm0".
+260601-13:16:36,225 nipype.workflow INFO:
+	 [Node] Cached "_anat_conform_xfm0" - collecting precomputed outputs
+260601-13:16:36,225 nipype.workflow INFO:
+	 [Node] "_anat_conform_xfm0" found cached.
+260601-13:16:36,226 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform_xfm1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0012_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform_xfm/mapflow/_anat_conform_xfm1".
+260601-13:16:36,227 nipype.workflow INFO:
+	 [Node] Cached "_anat_conform_xfm1" - collecting precomputed outputs
+260601-13:16:36,227 nipype.workflow INFO:
+	 [Node] "_anat_conform_xfm1" found cached.
+260601-13:16:38,218 nipype.workflow INFO:
+	 [Node] Setting-up "_n4_correct0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0012_ses_01_wf/anat_fit_wf/anat_template_wf/n4_correct/mapflow/_n4_correct0".
+260601-13:16:38,220 nipype.workflow INFO:
+	 [Node] Executing "_n4_correct0" <nipype.interfaces.ants.segmentation.N4BiasFieldCorrection>
+260601-13:17:01,903 nipype.workflow INFO:
+	 [Node] Finished "_denoise0", elapsed time 61.667877s.
+260601-13:17:02,240 nipype.workflow INFO:
+	 [Node] Setting-up "_n4_correct1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0012_ses_01_wf/anat_fit_wf/anat_template_wf/n4_correct/mapflow/_n4_correct1".
+260601-13:17:02,242 nipype.workflow INFO:
+	 [Node] Executing "_n4_correct1" <nipype.interfaces.ants.segmentation.N4BiasFieldCorrection>
+260601-13:17:02,245 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform_xfm0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0014_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform_xfm/mapflow/_anat_conform_xfm0".
+260601-13:17:02,246 nipype.workflow INFO:
+	 [Node] Executing "_anat_conform_xfm0" <niworkflows.interfaces.freesurfer.PatchedLTAConvert>
+260601-13:17:02,247 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform_xfm1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0014_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform_xfm/mapflow/_anat_conform_xfm1".
+260601-13:17:02,248 nipype.workflow INFO:
+	 [Node] Executing "_anat_conform_xfm1" <niworkflows.interfaces.freesurfer.PatchedLTAConvert>
+260601-13:17:02,379 nipype.workflow INFO:
+	 [Node] Finished "_anat_conform_xfm0", elapsed time 0.132499s.
+260601-13:17:02,386 nipype.workflow INFO:
+	 [Node] Finished "_anat_conform_xfm1", elapsed time 0.136628s.
+260601-13:17:04,237 nipype.workflow INFO:
+	 [Node] Setting-up "_n4_correct0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0014_ses_01_wf/anat_fit_wf/anat_template_wf/n4_correct/mapflow/_n4_correct0".
+260601-13:17:04,239 nipype.workflow INFO:
+	 [Node] Executing "_n4_correct0" <nipype.interfaces.ants.segmentation.N4BiasFieldCorrection>
+260601-13:17:04,241 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform_xfm0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0014_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform_xfm/mapflow/_anat_conform_xfm0".
+260601-13:17:04,243 nipype.workflow INFO:
+	 [Node] Cached "_anat_conform_xfm0" - collecting precomputed outputs
+260601-13:17:04,243 nipype.workflow INFO:
+	 [Node] "_anat_conform_xfm0" found cached.
+260601-13:17:04,244 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform_xfm1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0014_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform_xfm/mapflow/_anat_conform_xfm1".
+260601-13:17:04,245 nipype.workflow INFO:
+	 [Node] Cached "_anat_conform_xfm1" - collecting precomputed outputs
+260601-13:17:04,245 nipype.workflow INFO:
+	 [Node] "_anat_conform_xfm1" found cached.
+260601-13:17:06,222 nipype.workflow INFO:
+	 [Node] Setting-up "_n4_correct1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0014_ses_01_wf/anat_fit_wf/anat_template_wf/n4_correct/mapflow/_n4_correct1".
+260601-13:17:06,223 nipype.workflow INFO:
+	 [Node] Executing "_n4_correct1" <nipype.interfaces.ants.segmentation.N4BiasFieldCorrection>
+260601-13:17:18,448 nipype.workflow INFO:
+	 [Node] Finished "_denoise1", elapsed time 62.175212s.
+260601-13:17:19,379 nipype.workflow INFO:
+	 [Node] Finished "_n4_correct1", elapsed time 117.155145s.
+260601-13:17:20,253 nipype.workflow INFO:
+	 [Node] Setting-up "_denoise0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0017_ses_01_wf/anat_fit_wf/anat_template_wf/denoise/mapflow/_denoise0".
+260601-13:17:20,254 nipype.workflow INFO:
+	 [Node] Cached "_denoise0" - collecting precomputed outputs
+260601-13:17:20,254 nipype.workflow INFO:
+	 [Node] "_denoise0" found cached.
+260601-13:17:20,255 nipype.workflow INFO:
+	 [Node] Setting-up "_denoise1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0017_ses_01_wf/anat_fit_wf/anat_template_wf/denoise/mapflow/_denoise1".
+260601-13:17:20,255 nipype.workflow INFO:
+	 [Node] Cached "_denoise1" - collecting precomputed outputs
+260601-13:17:20,255 nipype.workflow INFO:
+	 [Node] "_denoise1" found cached.
+260601-13:17:20,257 nipype.workflow INFO:
+	 [Node] Setting-up "_n4_correct0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0010_ses_01_wf/anat_fit_wf/anat_template_wf/n4_correct/mapflow/_n4_correct0".
+260601-13:17:20,258 nipype.workflow INFO:
+	 [Node] Cached "_n4_correct0" - collecting precomputed outputs
+260601-13:17:20,259 nipype.workflow INFO:
+	 [Node] "_n4_correct0" found cached.
+260601-13:17:20,260 nipype.workflow INFO:
+	 [Node] Setting-up "_n4_correct1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0010_ses_01_wf/anat_fit_wf/anat_template_wf/n4_correct/mapflow/_n4_correct1".
+260601-13:17:20,261 nipype.workflow INFO:
+	 [Node] Cached "_n4_correct1" - collecting precomputed outputs
+260601-13:17:20,261 nipype.workflow INFO:
+	 [Node] "_n4_correct1" found cached.
+260601-13:17:22,245 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0010_ses_01_wf.anat_fit_wf.anat_template_wf.anat_merge" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0010_ses_01_wf/anat_fit_wf/anat_template_wf/anat_merge".
+260601-13:17:22,251 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform_xfm1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0015_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform_xfm/mapflow/_anat_conform_xfm1".
+260601-13:17:22,252 nipype.workflow INFO:
+	 [Node] Setting-up "_n4_correct0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0015_ses_01_wf/anat_fit_wf/anat_template_wf/n4_correct/mapflow/_n4_correct0".
+260601-13:17:22,253 nipype.workflow INFO:
+	 [Node] Executing "_anat_conform_xfm1" <niworkflows.interfaces.freesurfer.PatchedLTAConvert>
+260601-13:17:22,254 nipype.workflow INFO:
+	 [Node] Executing "_n4_correct0" <nipype.interfaces.ants.segmentation.N4BiasFieldCorrection>
+260601-13:17:22,256 nipype.workflow INFO:
+	 [Node] Executing "anat_merge" <niworkflows.interfaces.freesurfer.StructuralReference>
+260601-13:17:22,372 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform_xfm0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0015_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform_xfm/mapflow/_anat_conform_xfm0".
+260601-13:17:22,374 nipype.workflow INFO:
+	 [Node] Executing "_anat_conform_xfm0" <niworkflows.interfaces.freesurfer.PatchedLTAConvert>
+260601-13:17:22,387 nipype.workflow INFO:
+	 [Node] Finished "_anat_conform_xfm1", elapsed time 0.132788s.
+260601-13:17:22,482 nipype.workflow INFO:
+	 [Node] Finished "_anat_conform_xfm0", elapsed time 0.108065s.
+260601-13:17:24,244 nipype.workflow INFO:
+	 [Node] Setting-up "_n4_correct1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0015_ses_01_wf/anat_fit_wf/anat_template_wf/n4_correct/mapflow/_n4_correct1".
+260601-13:17:24,246 nipype.workflow INFO:
+	 [Node] Executing "_n4_correct1" <nipype.interfaces.ants.segmentation.N4BiasFieldCorrection>
+260601-13:17:24,248 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform_xfm0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0015_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform_xfm/mapflow/_anat_conform_xfm0".
+260601-13:17:24,248 nipype.workflow INFO:
+	 [Node] Cached "_anat_conform_xfm0" - collecting precomputed outputs
+260601-13:17:24,248 nipype.workflow INFO:
+	 [Node] "_anat_conform_xfm0" found cached.
+260601-13:17:24,249 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform_xfm1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0015_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform_xfm/mapflow/_anat_conform_xfm1".
+260601-13:17:24,250 nipype.workflow INFO:
+	 [Node] Cached "_anat_conform_xfm1" - collecting precomputed outputs
+260601-13:17:24,250 nipype.workflow INFO:
+	 [Node] "_anat_conform_xfm1" found cached.
+260601-13:17:26,230 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform_xfm0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0016_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform_xfm/mapflow/_anat_conform_xfm0".
+260601-13:17:26,232 nipype.workflow INFO:
+	 [Node] Executing "_anat_conform_xfm0" <niworkflows.interfaces.freesurfer.PatchedLTAConvert>
+260601-13:17:26,353 nipype.workflow INFO:
+	 [Node] Finished "_anat_conform_xfm0", elapsed time 0.120167s.
+260601-13:17:28,235 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform_xfm1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0016_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform_xfm/mapflow/_anat_conform_xfm1".
+260601-13:17:28,236 nipype.workflow INFO:
+	 [Node] Executing "_anat_conform_xfm1" <niworkflows.interfaces.freesurfer.PatchedLTAConvert>
+260601-13:17:28,361 nipype.workflow INFO:
+	 [Node] Finished "_anat_conform_xfm1", elapsed time 0.124201s.
+260601-13:17:30,239 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform_xfm0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0016_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform_xfm/mapflow/_anat_conform_xfm0".
+260601-13:17:30,240 nipype.workflow INFO:
+	 [Node] Cached "_anat_conform_xfm0" - collecting precomputed outputs
+260601-13:17:30,240 nipype.workflow INFO:
+	 [Node] "_anat_conform_xfm0" found cached.
+260601-13:17:30,240 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform_xfm1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0016_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform_xfm/mapflow/_anat_conform_xfm1".
+260601-13:17:30,241 nipype.workflow INFO:
+	 [Node] Cached "_anat_conform_xfm1" - collecting precomputed outputs
+260601-13:17:30,241 nipype.workflow INFO:
+	 [Node] "_anat_conform_xfm1" found cached.
+260601-13:17:32,227 nipype.workflow INFO:
+	 [Node] Setting-up "_n4_correct0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0016_ses_01_wf/anat_fit_wf/anat_template_wf/n4_correct/mapflow/_n4_correct0".
+260601-13:17:32,228 nipype.workflow INFO:
+	 [Node] Executing "_n4_correct0" <nipype.interfaces.ants.segmentation.N4BiasFieldCorrection>
+260601-13:17:46,368 nipype.workflow INFO:
+	 [Node] Finished "anat_merge", elapsed time 24.110774s.
+260601-13:17:48,251 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0010_ses_01_wf.anat_fit_wf.anat_template_wf.anat_reorient" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0010_ses_01_wf/anat_fit_wf/anat_template_wf/anat_reorient".
+260601-13:17:48,253 nipype.workflow INFO:
+	 [Node] Executing "anat_reorient" <nipype.interfaces.image.Reorient>
+260601-13:17:48,292 nipype.workflow INFO:
+	 [Node] Finished "anat_reorient", elapsed time 0.03798s.
+260601-13:17:50,500 nipype.workflow INFO:
+	 [Node] Setting-up "_n4_correct1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0016_ses_01_wf/anat_fit_wf/anat_template_wf/n4_correct/mapflow/_n4_correct1".
+260601-13:17:50,502 nipype.workflow INFO:
+	 [Node] Executing "_n4_correct1" <nipype.interfaces.ants.segmentation.N4BiasFieldCorrection>
+260601-13:18:24,909 nipype.workflow INFO:
+	 [Node] Finished "_n4_correct0", elapsed time 116.664878s.
+260601-13:18:26,279 nipype.workflow INFO:
+	 [Node] Setting-up "_truncate_images0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0010_ses_01_wf/anat_fit_wf/brain_extraction_wf/truncate_images/mapflow/_truncate_images0".
+260601-13:18:26,280 nipype.workflow INFO:
+	 [Node] Executing "_truncate_images0" <nipype.interfaces.ants.utils.ImageMath>
+260601-13:18:26,779 nipype.workflow INFO:
+	 [Node] Finished "_n4_correct1", elapsed time 116.528972s.
+260601-13:18:28,253 nipype.workflow INFO:
+	 [Node] Setting-up "_n4_correct0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0011_ses_01_wf/anat_fit_wf/anat_template_wf/n4_correct/mapflow/_n4_correct0".
+260601-13:18:28,254 nipype.workflow INFO:
+	 [Node] Cached "_n4_correct0" - collecting precomputed outputs
+260601-13:18:28,254 nipype.workflow INFO:
+	 [Node] "_n4_correct0" found cached.
+260601-13:18:28,254 nipype.workflow INFO:
+	 [Node] Setting-up "_n4_correct1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0011_ses_01_wf/anat_fit_wf/anat_template_wf/n4_correct/mapflow/_n4_correct1".
+260601-13:18:28,255 nipype.workflow INFO:
+	 [Node] Cached "_n4_correct1" - collecting precomputed outputs
+260601-13:18:28,255 nipype.workflow INFO:
+	 [Node] "_n4_correct1" found cached.
+260601-13:18:29,144 nipype.workflow INFO:
+	 [Node] Finished "_truncate_images0", elapsed time 2.86294s.
+260601-13:18:30,251 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0011_ses_01_wf.anat_fit_wf.anat_template_wf.anat_merge" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0011_ses_01_wf/anat_fit_wf/anat_template_wf/anat_merge".
+260601-13:18:30,252 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0017_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform/mapflow/_anat_conform0".
+260601-13:18:30,254 nipype.workflow INFO:
+	 [Node] Executing "_anat_conform0" <niworkflows.interfaces.images.Conform>
+260601-13:18:30,255 nipype.workflow INFO:
+	 [Node] Executing "anat_merge" <niworkflows.interfaces.freesurfer.StructuralReference>
+260601-13:18:31,342 nipype.workflow INFO:
+	 [Node] Finished "_anat_conform0", elapsed time 1.083817s.
+260601-13:18:32,241 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0017_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform/mapflow/_anat_conform1".
+260601-13:18:32,243 nipype.workflow INFO:
+	 [Node] Executing "_anat_conform1" <niworkflows.interfaces.images.Conform>
+260601-13:18:33,355 nipype.workflow INFO:
+	 [Node] Finished "_anat_conform1", elapsed time 1.110494s.
+260601-13:18:34,237 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0017_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform/mapflow/_anat_conform0".
+260601-13:18:34,237 nipype.workflow INFO:
+	 [Node] Cached "_anat_conform0" - collecting precomputed outputs
+260601-13:18:34,238 nipype.workflow INFO:
+	 [Node] "_anat_conform0" found cached.
+260601-13:18:34,238 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0017_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform/mapflow/_anat_conform1".
+260601-13:18:34,239 nipype.workflow INFO:
+	 [Node] Cached "_anat_conform1" - collecting precomputed outputs
+260601-13:18:34,239 nipype.workflow INFO:
+	 [Node] "_anat_conform1" found cached.
+260601-13:18:35,291 nipype.workflow INFO:
+	 [Node] Finished "_n4_correct0", elapsed time 117.070244s.
+260601-13:18:38,472 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform_xfm0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0017_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform_xfm/mapflow/_anat_conform_xfm0".
+260601-13:18:38,472 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform_xfm1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0017_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform_xfm/mapflow/_anat_conform_xfm1".
+260601-13:18:38,474 nipype.workflow INFO:
+	 [Node] Executing "_anat_conform_xfm1" <niworkflows.interfaces.freesurfer.PatchedLTAConvert>
+260601-13:18:38,475 nipype.workflow INFO:
+	 [Node] Executing "_anat_conform_xfm0" <niworkflows.interfaces.freesurfer.PatchedLTAConvert>
+260601-13:18:38,616 nipype.workflow INFO:
+	 [Node] Finished "_anat_conform_xfm1", elapsed time 0.140849s.
+260601-13:18:38,647 nipype.workflow INFO:
+	 [Node] Finished "_anat_conform_xfm0", elapsed time 0.171304s.
+260601-13:18:40,274 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform_xfm0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0017_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform_xfm/mapflow/_anat_conform_xfm0".
+260601-13:18:40,275 nipype.workflow INFO:
+	 [Node] Cached "_anat_conform_xfm0" - collecting precomputed outputs
+260601-13:18:40,275 nipype.workflow INFO:
+	 [Node] "_anat_conform_xfm0" found cached.
+260601-13:18:40,276 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform_xfm1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0017_ses_01_wf/anat_fit_wf/anat_template_wf/anat_conform_xfm/mapflow/_anat_conform_xfm1".
+260601-13:18:40,277 nipype.workflow INFO:
+	 [Node] Cached "_anat_conform_xfm1" - collecting precomputed outputs
+260601-13:18:40,277 nipype.workflow INFO:
+	 [Node] "_anat_conform_xfm1" found cached.
+260601-13:18:40,287 nipype.workflow INFO:
+	 [Node] Setting-up "_n4_correct0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0017_ses_01_wf/anat_fit_wf/anat_template_wf/n4_correct/mapflow/_n4_correct0".
+260601-13:18:40,288 nipype.workflow INFO:
+	 [Node] Executing "_n4_correct0" <nipype.interfaces.ants.segmentation.N4BiasFieldCorrection>
+260601-13:18:42,262 nipype.workflow INFO:
+	 [Node] Setting-up "_n4_correct1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0017_ses_01_wf/anat_fit_wf/anat_template_wf/n4_correct/mapflow/_n4_correct1".
+260601-13:18:42,264 nipype.workflow INFO:
+	 [Node] Executing "_n4_correct1" <nipype.interfaces.ants.segmentation.N4BiasFieldCorrection>
+260601-13:18:54,744 nipype.workflow INFO:
+	 [Node] Finished "anat_merge", elapsed time 24.488682s.
+260601-13:18:56,263 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0011_ses_01_wf.anat_fit_wf.anat_template_wf.anat_reorient" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0011_ses_01_wf/anat_fit_wf/anat_template_wf/anat_reorient".
+260601-13:18:56,265 nipype.workflow INFO:
+	 [Node] Executing "anat_reorient" <nipype.interfaces.image.Reorient>
+260601-13:18:56,309 nipype.workflow INFO:
+	 [Node] Finished "anat_reorient", elapsed time 0.043648s.
+260601-13:18:59,258 nipype.workflow INFO:
+	 [Node] Finished "_n4_correct1", elapsed time 117.014573s.
+260601-13:19:00,227 nipype.workflow INFO:
+	 [Node] Setting-up "_n4_correct0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0012_ses_01_wf/anat_fit_wf/anat_template_wf/n4_correct/mapflow/_n4_correct0".
+260601-13:19:00,228 nipype.workflow INFO:
+	 [Node] Cached "_n4_correct0" - collecting precomputed outputs
+260601-13:19:00,228 nipype.workflow INFO:
+	 [Node] "_n4_correct0" found cached.
+260601-13:19:00,228 nipype.workflow INFO:
+	 [Node] Setting-up "_n4_correct1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0012_ses_01_wf/anat_fit_wf/anat_template_wf/n4_correct/mapflow/_n4_correct1".
+260601-13:19:00,229 nipype.workflow INFO:
+	 [Node] Cached "_n4_correct1" - collecting precomputed outputs
+260601-13:19:00,229 nipype.workflow INFO:
+	 [Node] "_n4_correct1" found cached.
+260601-13:19:00,636 nipype.workflow INFO:
+	 [Node] Setting-up "_truncate_images0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0011_ses_01_wf/anat_fit_wf/brain_extraction_wf/truncate_images/mapflow/_truncate_images0".
+260601-13:19:00,637 nipype.workflow INFO:
+	 [Node] Executing "_truncate_images0" <nipype.interfaces.ants.utils.ImageMath>
+260601-13:19:00,832 nipype.workflow INFO:
+	 [Node] Finished "_n4_correct0", elapsed time 116.59206s.
+260601-13:19:02,241 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0012_ses_01_wf.anat_fit_wf.anat_template_wf.anat_merge" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0012_ses_01_wf/anat_fit_wf/anat_template_wf/anat_merge".
+260601-13:19:02,244 nipype.workflow INFO:
+	 [Node] Executing "anat_merge" <niworkflows.interfaces.freesurfer.StructuralReference>
+260601-13:19:03,257 nipype.workflow INFO:
+	 [Node] Finished "_n4_correct1", elapsed time 117.032748s.
+260601-13:19:03,337 nipype.workflow INFO:
+	 [Node] Finished "_truncate_images0", elapsed time 2.699069s.
+260601-13:19:04,247 nipype.workflow INFO:
+	 [Node] Setting-up "_n4_correct0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0014_ses_01_wf/anat_fit_wf/anat_template_wf/n4_correct/mapflow/_n4_correct0".
+260601-13:19:04,248 nipype.workflow INFO:
+	 [Node] Cached "_n4_correct0" - collecting precomputed outputs
+260601-13:19:04,248 nipype.workflow INFO:
+	 [Node] "_n4_correct0" found cached.
+260601-13:19:04,249 nipype.workflow INFO:
+	 [Node] Setting-up "_n4_correct1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0014_ses_01_wf/anat_fit_wf/anat_template_wf/n4_correct/mapflow/_n4_correct1".
+260601-13:19:04,249 nipype.workflow INFO:
+	 [Node] Cached "_n4_correct1" - collecting precomputed outputs
+260601-13:19:04,249 nipype.workflow INFO:
+	 [Node] "_n4_correct1" found cached.
+260601-13:19:06,235 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0014_ses_01_wf.anat_fit_wf.anat_template_wf.anat_merge" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0014_ses_01_wf/anat_fit_wf/anat_template_wf/anat_merge".
+260601-13:19:06,238 nipype.workflow INFO:
+	 [Node] Executing "anat_merge" <niworkflows.interfaces.freesurfer.StructuralReference>
+260601-13:19:19,144 nipype.workflow INFO:
+	 [Node] Finished "_n4_correct0", elapsed time 116.889624s.
+260601-13:19:20,232 nipype.workflow INFO:
+	 [Node] Setting-up "_inu_n40" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0010_ses_01_wf/anat_fit_wf/brain_extraction_wf/inu_n4/mapflow/_inu_n40".
+260601-13:19:20,233 nipype.workflow INFO:
+	 [Node] Executing "_inu_n40" <nipype.interfaces.ants.segmentation.N4BiasFieldCorrection>
+260601-13:19:20,902 nipype.workflow INFO:
+	 [Node] Finished "_n4_correct1", elapsed time 116.655485s.
+260601-13:19:22,236 nipype.workflow INFO:
+	 [Node] Setting-up "_n4_correct0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0015_ses_01_wf/anat_fit_wf/anat_template_wf/n4_correct/mapflow/_n4_correct0".
+260601-13:19:22,237 nipype.workflow INFO:
+	 [Node] Cached "_n4_correct0" - collecting precomputed outputs
+260601-13:19:22,237 nipype.workflow INFO:
+	 [Node] "_n4_correct0" found cached.
+260601-13:19:22,238 nipype.workflow INFO:
+	 [Node] Setting-up "_n4_correct1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0015_ses_01_wf/anat_fit_wf/anat_template_wf/n4_correct/mapflow/_n4_correct1".
+260601-13:19:22,238 nipype.workflow INFO:
+	 [Node] Cached "_n4_correct1" - collecting precomputed outputs
+260601-13:19:22,238 nipype.workflow INFO:
+	 [Node] "_n4_correct1" found cached.
+260601-13:19:24,245 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0015_ses_01_wf.anat_fit_wf.anat_template_wf.anat_merge" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0015_ses_01_wf/anat_fit_wf/anat_template_wf/anat_merge".
+260601-13:19:24,248 nipype.workflow INFO:
+	 [Node] Executing "anat_merge" <niworkflows.interfaces.freesurfer.StructuralReference>
+260601-13:19:29,64 nipype.workflow INFO:
+	 [Node] Finished "_n4_correct0", elapsed time 116.834868s.
+260601-13:19:30,526 nipype.workflow INFO:
+	 [Node] Finished "anat_merge", elapsed time 24.287437s.
+260601-13:19:32,247 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0014_ses_01_wf.anat_fit_wf.anat_template_wf.anat_reorient" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0014_ses_01_wf/anat_fit_wf/anat_template_wf/anat_reorient".
+260601-13:19:32,250 nipype.workflow INFO:
+	 [Node] Executing "anat_reorient" <nipype.interfaces.image.Reorient>
+260601-13:19:32,302 nipype.workflow INFO:
+	 [Node] Finished "anat_reorient", elapsed time 0.051069s.
+260601-13:19:36,474 nipype.workflow INFO:
+	 [Node] Setting-up "_truncate_images0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0014_ses_01_wf/anat_fit_wf/brain_extraction_wf/truncate_images/mapflow/_truncate_images0".
+260601-13:19:36,477 nipype.workflow INFO:
+	 [Node] Executing "_truncate_images0" <nipype.interfaces.ants.utils.ImageMath>
+260601-13:19:36,527 nipype.workflow INFO:
+	 [Node] Finished "anat_merge", elapsed time 34.282178s.
+260601-13:19:38,239 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0012_ses_01_wf.anat_fit_wf.anat_template_wf.anat_reorient" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0012_ses_01_wf/anat_fit_wf/anat_template_wf/anat_reorient".
+260601-13:19:38,241 nipype.workflow INFO:
+	 [Node] Executing "anat_reorient" <nipype.interfaces.image.Reorient>
+260601-13:19:38,286 nipype.workflow INFO:
+	 [Node] Finished "anat_reorient", elapsed time 0.043873s.
+260601-13:19:39,566 nipype.workflow INFO:
+	 [Node] Finished "_truncate_images0", elapsed time 3.088785s.
+260601-13:19:40,524 nipype.workflow INFO:
+	 [Node] Setting-up "_inu_n40" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0011_ses_01_wf/anat_fit_wf/brain_extraction_wf/inu_n4/mapflow/_inu_n40".
+260601-13:19:40,525 nipype.workflow INFO:
+	 [Node] Executing "_inu_n40" <nipype.interfaces.ants.segmentation.N4BiasFieldCorrection>
+260601-13:19:47,854 nipype.workflow INFO:
+	 [Node] Finished "_n4_correct1", elapsed time 117.351968s.
+260601-13:19:48,247 nipype.workflow INFO:
+	 [Node] Setting-up "_n4_correct0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0016_ses_01_wf/anat_fit_wf/anat_template_wf/n4_correct/mapflow/_n4_correct0".
+260601-13:19:48,248 nipype.workflow INFO:
+	 [Node] Cached "_n4_correct0" - collecting precomputed outputs
+260601-13:19:48,248 nipype.workflow INFO:
+	 [Node] "_n4_correct0" found cached.
+260601-13:19:48,249 nipype.workflow INFO:
+	 [Node] Setting-up "_n4_correct1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0016_ses_01_wf/anat_fit_wf/anat_template_wf/n4_correct/mapflow/_n4_correct1".
+260601-13:19:48,249 nipype.workflow INFO:
+	 [Node] Cached "_n4_correct1" - collecting precomputed outputs
+260601-13:19:48,249 nipype.workflow INFO:
+	 [Node] "_n4_correct1" found cached.
+260601-13:19:48,484 nipype.workflow INFO:
+	 [Node] Finished "anat_merge", elapsed time 24.234958s.
+260601-13:19:50,242 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0016_ses_01_wf.anat_fit_wf.anat_template_wf.anat_merge" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0016_ses_01_wf/anat_fit_wf/anat_template_wf/anat_merge".
+260601-13:19:50,242 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0015_ses_01_wf.anat_fit_wf.anat_template_wf.anat_reorient" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0015_ses_01_wf/anat_fit_wf/anat_template_wf/anat_reorient".
+260601-13:19:50,244 nipype.workflow INFO:
+	 [Node] Executing "anat_merge" <niworkflows.interfaces.freesurfer.StructuralReference>
+260601-13:19:50,244 nipype.workflow INFO:
+	 [Node] Executing "anat_reorient" <nipype.interfaces.image.Reorient>
+260601-13:19:50,286 nipype.workflow INFO:
+	 [Node] Finished "anat_reorient", elapsed time 0.041514s.
+260601-13:19:52,479 nipype.workflow INFO:
+	 [Node] Setting-up "_truncate_images0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0012_ses_01_wf/anat_fit_wf/brain_extraction_wf/truncate_images/mapflow/_truncate_images0".
+260601-13:19:52,480 nipype.workflow INFO:
+	 [Node] Executing "_truncate_images0" <nipype.interfaces.ants.utils.ImageMath>
+260601-13:19:55,966 nipype.workflow INFO:
+	 [Node] Finished "_truncate_images0", elapsed time 3.485216s.
+260601-13:19:56,265 nipype.workflow INFO:
+	 [Node] Setting-up "_truncate_images0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0015_ses_01_wf/anat_fit_wf/brain_extraction_wf/truncate_images/mapflow/_truncate_images0".
+260601-13:19:56,266 nipype.workflow INFO:
+	 [Node] Executing "_truncate_images0" <nipype.interfaces.ants.utils.ImageMath>
+260601-13:19:59,182 nipype.workflow INFO:
+	 [Node] Finished "_truncate_images0", elapsed time 2.9149599999999998s.
+260601-13:20:14,631 nipype.workflow INFO:
+	 [Node] Finished "anat_merge", elapsed time 24.386943s.
+260601-13:20:16,253 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0016_ses_01_wf.anat_fit_wf.anat_template_wf.anat_reorient" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0016_ses_01_wf/anat_fit_wf/anat_template_wf/anat_reorient".
+260601-13:20:16,256 nipype.workflow INFO:
+	 [Node] Executing "anat_reorient" <nipype.interfaces.image.Reorient>
+260601-13:20:16,306 nipype.workflow INFO:
+	 [Node] Finished "anat_reorient", elapsed time 0.048942s.
+260601-13:20:19,57 nipype.workflow INFO:
+	 [Node] Finished "_inu_n40", elapsed time 58.822875s.
+260601-13:20:20,466 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0010_ses_01_wf.anat_fit_wf.brain_extraction_wf.res_target" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0010_ses_01_wf/anat_fit_wf/brain_extraction_wf/res_target".
+260601-13:20:20,467 nipype.workflow INFO:
+	 [Node] Setting-up "_truncate_images0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0016_ses_01_wf/anat_fit_wf/brain_extraction_wf/truncate_images/mapflow/_truncate_images0".
+260601-13:20:20,468 nipype.workflow INFO:
+	 [Node] Executing "res_target" <niworkflows.interfaces.nibabel.RegridToZooms>
+260601-13:20:20,469 nipype.workflow INFO:
+	 [Node] Executing "_truncate_images0" <nipype.interfaces.ants.utils.ImageMath>
+260601-13:20:20,469 nipype.workflow INFO:
+	 [Node] Setting-up "_inu_n40" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0012_ses_01_wf/anat_fit_wf/brain_extraction_wf/inu_n4/mapflow/_inu_n40".
+260601-13:20:20,470 nipype.workflow INFO:
+	 [Node] Executing "_inu_n40" <nipype.interfaces.ants.segmentation.N4BiasFieldCorrection>
+260601-13:20:21,859 nipype.workflow INFO:
+	 [Node] Finished "res_target", elapsed time 1.390214s.
+260601-13:20:22,272 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0010_ses_01_wf.anat_fit_wf.brain_extraction_wf.lap_target" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0010_ses_01_wf/anat_fit_wf/brain_extraction_wf/lap_target".
+260601-13:20:22,275 nipype.workflow INFO:
+	 [Node] Executing "lap_target" <nipype.interfaces.ants.utils.ImageMath>
+260601-13:20:23,333 nipype.workflow INFO:
+	 [Node] Finished "_truncate_images0", elapsed time 2.864016s.
+260601-13:20:28,551 nipype.workflow INFO:
+	 [Node] Finished "lap_target", elapsed time 6.275611s.
+260601-13:20:30,247 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0010_ses_01_wf.anat_fit_wf.brain_extraction_wf.mrg_target" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0010_ses_01_wf/anat_fit_wf/brain_extraction_wf/mrg_target".
+260601-13:20:30,251 nipype.workflow INFO:
+	 [Node] Executing "mrg_target" <nipype.interfaces.utility.base.Merge>
+260601-13:20:30,252 nipype.workflow INFO:
+	 [Node] Finished "mrg_target", elapsed time 0.000164s.
+260601-13:20:37,337 nipype.workflow INFO:
+	 [Node] Finished "_n4_correct0", elapsed time 117.047909s.
+260601-13:20:38,241 nipype.workflow INFO:
+	 [Node] Setting-up "_inu_n40" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0014_ses_01_wf/anat_fit_wf/brain_extraction_wf/inu_n4/mapflow/_inu_n40".
+260601-13:20:38,243 nipype.workflow INFO:
+	 [Node] Executing "_inu_n40" <nipype.interfaces.ants.segmentation.N4BiasFieldCorrection>
+260601-13:20:39,84 nipype.workflow INFO:
+	 [Node] Finished "_n4_correct1", elapsed time 116.819478s.
+260601-13:20:39,665 nipype.workflow INFO:
+	 [Node] Finished "_inu_n40", elapsed time 59.139565s.
+260601-13:20:40,245 nipype.workflow INFO:
+	 [Node] Setting-up "_inu_n40" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0015_ses_01_wf/anat_fit_wf/brain_extraction_wf/inu_n4/mapflow/_inu_n40".
+260601-13:20:40,247 nipype.workflow INFO:
+	 [Node] Executing "_inu_n40" <nipype.interfaces.ants.segmentation.N4BiasFieldCorrection>
+260601-13:20:40,251 nipype.workflow INFO:
+	 [Node] Setting-up "_n4_correct0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0017_ses_01_wf/anat_fit_wf/anat_template_wf/n4_correct/mapflow/_n4_correct0".
+260601-13:20:40,252 nipype.workflow INFO:
+	 [Node] Cached "_n4_correct0" - collecting precomputed outputs
+260601-13:20:40,252 nipype.workflow INFO:
+	 [Node] "_n4_correct0" found cached.
+260601-13:20:40,252 nipype.workflow INFO:
+	 [Node] Setting-up "_n4_correct1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0017_ses_01_wf/anat_fit_wf/anat_template_wf/n4_correct/mapflow/_n4_correct1".
+260601-13:20:40,253 nipype.workflow INFO:
+	 [Node] Cached "_n4_correct1" - collecting precomputed outputs
+260601-13:20:40,253 nipype.workflow INFO:
+	 [Node] "_n4_correct1" found cached.
+260601-13:20:42,241 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0017_ses_01_wf.anat_fit_wf.anat_template_wf.anat_merge" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0017_ses_01_wf/anat_fit_wf/anat_template_wf/anat_merge".
+260601-13:20:42,244 nipype.workflow INFO:
+	 [Node] Executing "anat_merge" <niworkflows.interfaces.freesurfer.StructuralReference>
+260601-13:21:06,527 nipype.workflow INFO:
+	 [Node] Finished "anat_merge", elapsed time 24.281999s.
+260601-13:21:08,273 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0017_ses_01_wf.anat_fit_wf.anat_template_wf.anat_reorient" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0017_ses_01_wf/anat_fit_wf/anat_template_wf/anat_reorient".
+260601-13:21:08,275 nipype.workflow INFO:
+	 [Node] Executing "anat_reorient" <nipype.interfaces.image.Reorient>
+260601-13:21:08,320 nipype.workflow INFO:
+	 [Node] Finished "anat_reorient", elapsed time 0.044866s.
+260601-13:21:10,500 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0011_ses_01_wf.anat_fit_wf.brain_extraction_wf.res_target" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0011_ses_01_wf/anat_fit_wf/brain_extraction_wf/res_target".
+260601-13:21:10,503 nipype.workflow INFO:
+	 [Node] Executing "res_target" <niworkflows.interfaces.nibabel.RegridToZooms>
+260601-13:21:11,902 nipype.workflow INFO:
+	 [Node] Finished "res_target", elapsed time 1.398242s.
+260601-13:21:12,276 nipype.workflow INFO:
+	 [Node] Setting-up "_truncate_images0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0017_ses_01_wf/anat_fit_wf/brain_extraction_wf/truncate_images/mapflow/_truncate_images0".
+260601-13:21:12,277 nipype.workflow INFO:
+	 [Node] Executing "_truncate_images0" <nipype.interfaces.ants.utils.ImageMath>
+260601-13:21:15,540 nipype.workflow INFO:
+	 [Node] Finished "_truncate_images0", elapsed time 3.262441s.
+260601-13:21:16,263 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0011_ses_01_wf.anat_fit_wf.brain_extraction_wf.lap_target" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0011_ses_01_wf/anat_fit_wf/brain_extraction_wf/lap_target".
+260601-13:21:16,267 nipype.workflow INFO:
+	 [Node] Executing "lap_target" <nipype.interfaces.ants.utils.ImageMath>
+260601-13:21:19,66 nipype.workflow INFO:
+	 [Node] Finished "_inu_n40", elapsed time 58.59575s.
+260601-13:21:20,249 nipype.workflow INFO:
+	 [Node] Setting-up "_inu_n40" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0016_ses_01_wf/anat_fit_wf/brain_extraction_wf/inu_n4/mapflow/_inu_n40".
+260601-13:21:20,251 nipype.workflow INFO:
+	 [Node] Executing "_inu_n40" <nipype.interfaces.ants.segmentation.N4BiasFieldCorrection>
+260601-13:21:22,650 nipype.workflow INFO:
+	 [Node] Finished "lap_target", elapsed time 6.381698s.
+260601-13:21:24,250 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0012_ses_01_wf.anat_fit_wf.brain_extraction_wf.res_target" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0012_ses_01_wf/anat_fit_wf/brain_extraction_wf/res_target".
+260601-13:21:24,253 nipype.workflow INFO:
+	 [Node] Executing "res_target" <niworkflows.interfaces.nibabel.RegridToZooms>
+260601-13:21:25,594 nipype.workflow INFO:
+	 [Node] Finished "res_target", elapsed time 1.340406s.
+260601-13:21:26,260 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0012_ses_01_wf.anat_fit_wf.brain_extraction_wf.lap_target" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0012_ses_01_wf/anat_fit_wf/brain_extraction_wf/lap_target".
+260601-13:21:26,262 nipype.workflow INFO:
+	 [Node] Executing "lap_target" <nipype.interfaces.ants.utils.ImageMath>
+260601-13:21:33,345 nipype.workflow INFO:
+	 [Node] Finished "lap_target", elapsed time 7.082464s.
+260601-13:21:34,243 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0011_ses_01_wf.anat_fit_wf.brain_extraction_wf.mrg_target" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0011_ses_01_wf/anat_fit_wf/brain_extraction_wf/mrg_target".
+260601-13:21:34,245 nipype.workflow INFO:
+	 [Node] Executing "mrg_target" <nipype.interfaces.utility.base.Merge>
+260601-13:21:34,246 nipype.workflow INFO:
+	 [Node] Finished "mrg_target", elapsed time 0.000184s.
+260601-13:21:36,248 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0012_ses_01_wf.anat_fit_wf.brain_extraction_wf.mrg_target" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0012_ses_01_wf/anat_fit_wf/brain_extraction_wf/mrg_target".
+260601-13:21:36,250 nipype.workflow INFO:
+	 [Node] Executing "mrg_target" <nipype.interfaces.utility.base.Merge>
+260601-13:21:36,251 nipype.workflow INFO:
+	 [Node] Finished "mrg_target", elapsed time 0.000177s.
+260601-13:21:37,695 nipype.workflow INFO:
+	 [Node] Finished "_inu_n40", elapsed time 59.450474s.
+260601-13:21:38,256 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0014_ses_01_wf.anat_fit_wf.brain_extraction_wf.res_target" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0014_ses_01_wf/anat_fit_wf/brain_extraction_wf/res_target".
+260601-13:21:38,259 nipype.workflow INFO:
+	 [Node] Setting-up "_inu_n40" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0017_ses_01_wf/anat_fit_wf/brain_extraction_wf/inu_n4/mapflow/_inu_n40".
+260601-13:21:38,259 nipype.workflow INFO:
+	 [Node] Executing "res_target" <niworkflows.interfaces.nibabel.RegridToZooms>
+260601-13:21:38,260 nipype.workflow INFO:
+	 [Node] Executing "_inu_n40" <nipype.interfaces.ants.segmentation.N4BiasFieldCorrection>
+260601-13:21:39,502 nipype.workflow INFO:
+	 [Node] Finished "res_target", elapsed time 1.24267s.
+260601-13:21:40,232 nipype.workflow INFO:
+	 [Node] Finished "_inu_n40", elapsed time 59.984071s.
+260601-13:21:40,250 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0014_ses_01_wf.anat_fit_wf.brain_extraction_wf.lap_target" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0014_ses_01_wf/anat_fit_wf/brain_extraction_wf/lap_target".
+260601-13:21:40,256 nipype.workflow INFO:
+	 [Node] Executing "lap_target" <nipype.interfaces.ants.utils.ImageMath>
+260601-13:21:42,251 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0015_ses_01_wf.anat_fit_wf.brain_extraction_wf.lap_target" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0015_ses_01_wf/anat_fit_wf/brain_extraction_wf/lap_target".
+260601-13:21:42,251 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0015_ses_01_wf.anat_fit_wf.brain_extraction_wf.res_target" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0015_ses_01_wf/anat_fit_wf/brain_extraction_wf/res_target".
+260601-13:21:42,253 nipype.workflow INFO:
+	 [Node] Executing "lap_target" <nipype.interfaces.ants.utils.ImageMath>
+260601-13:21:42,254 nipype.workflow INFO:
+	 [Node] Executing "res_target" <niworkflows.interfaces.nibabel.RegridToZooms>
+260601-13:21:43,616 nipype.workflow INFO:
+	 [Node] Finished "res_target", elapsed time 1.360513s.
+260601-13:21:47,35 nipype.workflow INFO:
+	 [Node] Finished "lap_target", elapsed time 6.778592s.
+260601-13:21:48,247 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0010_ses_01_wf.anat_fit_wf.brain_extraction_wf.init_aff" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0010_ses_01_wf/anat_fit_wf/brain_extraction_wf/init_aff".
+260601-13:21:48,251 nipype.workflow INFO:
+	 [Node] Executing "init_aff" <nipype.interfaces.ants.utils.AI>
+260601-13:21:48,919 nipype.workflow INFO:
+	 [Node] Finished "lap_target", elapsed time 6.665958s.
+260601-13:21:50,261 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0014_ses_01_wf.anat_fit_wf.brain_extraction_wf.mrg_target" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0014_ses_01_wf/anat_fit_wf/brain_extraction_wf/mrg_target".
+260601-13:21:50,265 nipype.workflow INFO:
+	 [Node] Executing "mrg_target" <nipype.interfaces.utility.base.Merge>
+260601-13:21:50,265 nipype.workflow INFO:
+	 [Node] Finished "mrg_target", elapsed time 0.000158s.
+260601-13:21:52,278 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0015_ses_01_wf.anat_fit_wf.brain_extraction_wf.mrg_target" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0015_ses_01_wf/anat_fit_wf/brain_extraction_wf/mrg_target".
+260601-13:21:52,281 nipype.workflow INFO:
+	 [Node] Executing "mrg_target" <nipype.interfaces.utility.base.Merge>
+260601-13:21:52,282 nipype.workflow INFO:
+	 [Node] Finished "mrg_target", elapsed time 0.000215s.
+260601-13:22:15,142 nipype.workflow INFO:
+	 [Node] Finished "init_aff", elapsed time 26.890494s.
+260601-13:22:16,260 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0011_ses_01_wf.anat_fit_wf.brain_extraction_wf.init_aff" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0011_ses_01_wf/anat_fit_wf/brain_extraction_wf/init_aff".
+260601-13:22:16,263 nipype.workflow INFO:
+	 [Node] Executing "init_aff" <nipype.interfaces.ants.utils.AI>
+260601-13:22:19,66 nipype.workflow INFO:
+	 [Node] Finished "_inu_n40", elapsed time 58.814539s.
+260601-13:22:20,253 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0016_ses_01_wf.anat_fit_wf.brain_extraction_wf.res_target" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0016_ses_01_wf/anat_fit_wf/brain_extraction_wf/res_target".
+260601-13:22:20,253 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0016_ses_01_wf.anat_fit_wf.brain_extraction_wf.lap_target" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0016_ses_01_wf/anat_fit_wf/brain_extraction_wf/lap_target".
+260601-13:22:20,255 nipype.workflow INFO:
+	 [Node] Executing "res_target" <niworkflows.interfaces.nibabel.RegridToZooms>
+260601-13:22:20,256 nipype.workflow INFO:
+	 [Node] Executing "lap_target" <nipype.interfaces.ants.utils.ImageMath>
+260601-13:22:21,559 nipype.workflow INFO:
+	 [Node] Finished "res_target", elapsed time 1.302283s.
+260601-13:22:22,286 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0012_ses_01_wf.anat_fit_wf.brain_extraction_wf.init_aff" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0012_ses_01_wf/anat_fit_wf/brain_extraction_wf/init_aff".
+260601-13:22:22,288 nipype.workflow INFO:
+	 [Node] Executing "init_aff" <nipype.interfaces.ants.utils.AI>
+260601-13:22:26,662 nipype.workflow INFO:
+	 [Node] Finished "lap_target", elapsed time 6.404971s.
+260601-13:22:28,296 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0016_ses_01_wf.anat_fit_wf.brain_extraction_wf.mrg_target" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0016_ses_01_wf/anat_fit_wf/brain_extraction_wf/mrg_target".
+260601-13:22:28,298 nipype.workflow INFO:
+	 [Node] Executing "mrg_target" <nipype.interfaces.utility.base.Merge>
+260601-13:22:28,298 nipype.workflow INFO:
+	 [Node] Finished "mrg_target", elapsed time 0.00014s.
+260601-13:22:37,765 nipype.workflow INFO:
+	 [Node] Finished "_inu_n40", elapsed time 59.504147s.
+260601-13:22:38,266 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0017_ses_01_wf.anat_fit_wf.brain_extraction_wf.res_target" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0017_ses_01_wf/anat_fit_wf/brain_extraction_wf/res_target".
+260601-13:22:38,267 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0017_ses_01_wf.anat_fit_wf.brain_extraction_wf.lap_target" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0017_ses_01_wf/anat_fit_wf/brain_extraction_wf/lap_target".
+260601-13:22:38,269 nipype.workflow INFO:
+	 [Node] Executing "res_target" <niworkflows.interfaces.nibabel.RegridToZooms>
+260601-13:22:38,270 nipype.workflow INFO:
+	 [Node] Executing "lap_target" <nipype.interfaces.ants.utils.ImageMath>
+260601-13:22:39,648 nipype.workflow INFO:
+	 [Node] Finished "res_target", elapsed time 1.378629s.
+260601-13:22:40,263 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0014_ses_01_wf.anat_fit_wf.brain_extraction_wf.init_aff" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0014_ses_01_wf/anat_fit_wf/brain_extraction_wf/init_aff".
+260601-13:22:40,266 nipype.workflow INFO:
+	 [Node] Executing "init_aff" <nipype.interfaces.ants.utils.AI>
+260601-13:22:43,597 nipype.workflow INFO:
+	 [Node] Finished "init_aff", elapsed time 27.333809s.
+260601-13:22:44,270 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0015_ses_01_wf.anat_fit_wf.brain_extraction_wf.init_aff" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0015_ses_01_wf/anat_fit_wf/brain_extraction_wf/init_aff".
+260601-13:22:44,273 nipype.workflow INFO:
+	 [Node] Executing "init_aff" <nipype.interfaces.ants.utils.AI>
+260601-13:22:45,463 nipype.workflow INFO:
+	 [Node] Finished "lap_target", elapsed time 7.192963s.
+260601-13:22:46,304 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0017_ses_01_wf.anat_fit_wf.brain_extraction_wf.mrg_target" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0017_ses_01_wf/anat_fit_wf/brain_extraction_wf/mrg_target".
+260601-13:22:46,308 nipype.workflow INFO:
+	 [Node] Executing "mrg_target" <nipype.interfaces.utility.base.Merge>
+260601-13:22:46,309 nipype.workflow INFO:
+	 [Node] Finished "mrg_target", elapsed time 0.000226s.
+260601-13:22:49,601 nipype.workflow INFO:
+	 [Node] Finished "init_aff", elapsed time 27.311715s.
+260601-13:22:50,306 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0016_ses_01_wf.anat_fit_wf.brain_extraction_wf.init_aff" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0016_ses_01_wf/anat_fit_wf/brain_extraction_wf/init_aff".
+260601-13:22:50,310 nipype.workflow INFO:
+	 [Node] Executing "init_aff" <nipype.interfaces.ants.utils.AI>
+260601-13:23:07,610 nipype.workflow INFO:
+	 [Node] Finished "init_aff", elapsed time 27.343713s.
+260601-13:23:08,285 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0017_ses_01_wf.anat_fit_wf.brain_extraction_wf.init_aff" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0017_ses_01_wf/anat_fit_wf/brain_extraction_wf/init_aff".
+260601-13:23:08,289 nipype.workflow INFO:
+	 [Node] Executing "init_aff" <nipype.interfaces.ants.utils.AI>
+260601-13:23:11,916 nipype.workflow INFO:
+	 [Node] Finished "init_aff", elapsed time 27.643084s.
+260601-13:23:12,281 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0010_ses_01_wf.anat_fit_wf.brain_extraction_wf.norm" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0010_ses_01_wf/anat_fit_wf/brain_extraction_wf/norm".
+260601-13:23:12,290 nipype.workflow INFO:
+	 [Node] Executing "norm" <niworkflows.interfaces.fixes.FixHeaderRegistration>
+260601-13:23:17,354 nipype.workflow INFO:
+	 [Node] Finished "init_aff", elapsed time 27.043283s.
+260601-13:23:18,266 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0011_ses_01_wf.anat_fit_wf.brain_extraction_wf.norm" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0011_ses_01_wf/anat_fit_wf/brain_extraction_wf/norm".
+260601-13:23:18,271 nipype.workflow INFO:
+	 [Node] Executing "norm" <niworkflows.interfaces.fixes.FixHeaderRegistration>
+260601-13:23:35,366 nipype.workflow INFO:
+	 [Node] Finished "init_aff", elapsed time 27.076628s.
+260601-13:23:36,272 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_gutsaumc0012_ses_01_wf.anat_fit_wf.brain_extraction_wf.norm" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0012_ses_01_wf/anat_fit_wf/brain_extraction_wf/norm".
+260601-13:23:36,279 nipype.workflow INFO:
+	 [Node] Executing "norm" <niworkflows.interfaces.fixes.FixHeaderRegistration>
