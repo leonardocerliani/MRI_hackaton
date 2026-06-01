@@ -11766,3 +11766,27 @@ bids-validator@1.14.10
 	 [Node] Setting-up "_denoise1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0014_ses_01_wf/anat_fit_wf/anat_template_wf/denoise/mapflow/_denoise1".
 260601-13:14:24,223 nipype.workflow INFO:
 	 [Node] Executing "_denoise1" <nipype.interfaces.ants.segmentation.DenoiseImage>
+260601-13:14:27,205 nipype.workflow INFO:
+	 [Node] Finished "_denoise1", elapsed time 70.987612s.
+260601-13:14:28,217 nipype.workflow INFO:
+	 [Node] Setting-up "_denoise0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0012_ses_01_wf/anat_fit_wf/anat_template_wf/denoise/mapflow/_denoise0".
+260601-13:14:28,218 nipype.workflow INFO:
+	 [Node] Cached "_denoise0" - collecting precomputed outputs
+260601-13:14:28,218 nipype.workflow INFO:
+	 [Node] "_denoise0" found cached.
+260601-13:14:28,218 nipype.workflow INFO:
+	 [Node] Setting-up "_denoise1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0012_ses_01_wf/anat_fit_wf/anat_template_wf/denoise/mapflow/_denoise1".
+260601-13:14:28,219 nipype.workflow INFO:
+	 [Node] Cached "_denoise1" - collecting precomputed outputs
+260601-13:14:28,219 nipype.workflow INFO:
+	 [Node] "_denoise1" found cached.
+260601-13:14:30,225 nipype.workflow INFO:
+	 [Node] Setting-up "_denoise0" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0015_ses_01_wf/anat_fit_wf/anat_template_wf/denoise/mapflow/_denoise0".
+260601-13:14:30,227 nipype.workflow INFO:
+	 [Node] Executing "_denoise0" <nipype.interfaces.ants.segmentation.DenoiseImage>
+260601-13:15:01,74 nipype.workflow INFO:
+	 [Node] Finished "_denoise0", elapsed time 58.848686s.
+260601-13:15:02,221 nipype.workflow INFO:
+	 [Node] Setting-up "_denoise1" in "/scratch/fmriprep_25_2_wf/sub_gutsaumc0015_ses_01_wf/anat_fit_wf/anat_template_wf/denoise/mapflow/_denoise1".
+260601-13:15:02,224 nipype.workflow INFO:
+	 [Node] Executing "_denoise1" <nipype.interfaces.ants.segmentation.DenoiseImage>
