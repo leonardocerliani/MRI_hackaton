@@ -29,10 +29,10 @@
 # ── User parameters — edit everything in this section ──────────────────────
 # ════════════════════════════════════════════════════════════════════════════
 
-SKULL_STRIP_PROCEDURE="synthstrip"   # "synthstrip"  or  "fmriprep"
+SKULL_STRIP_PROCEDURE="fmriprep"   # "synthstrip"  or  "fmriprep"
 
 bids_root="/data03/MRI_hackaton_data/Data_collection/bids"
-deriv_root="/data03/MRI_hackaton_data/Data_collection/fmriprep_synthstrip_NO_CSF"
+deriv_root="/data03/MRI_hackaton_data/Data_collection/fmriprep_ANTs_skullstrip"
 work_dir="./fmriprep_work_MASSIVE_DELETE_ASAP"
 list_subj="./list_subj.txt"  # one subject ID per line (e.g. sub-gutsaumc0010)
 
