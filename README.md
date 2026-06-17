@@ -2,6 +2,9 @@
 
 _LC last update: 2026-04-23_
 
+> [!IMPORTANT]
+> The **interaction between Synthstrip and fmriprep** was updated with respect to what is documented below. I will try to update this readme soon. In the meanwhile, please refer to [this updated procedure](https://github.com/leonardocerliani/MRI_carpentry/tree/main/gerla/10_skullstrip_synthstrip_fmriprep)
+
 
 # Organization of code + data
 The main principle of working on storm is to have
@@ -273,7 +276,6 @@ done
 
 
 # 03. Skullstripping with synthstrip
-[ref to 10_skull_stripping](https://github.com/leonardocerliani/GUTS_fmri_preproc/tree/main/TUT/10_skull_stripping)
 
 **NB: It was noted that if the option `--no-csf` is used, it causes `fast` segmentation to throw an error since it cannot initialize the kmeans for three classes. Therefore - for the sake of fmriprep - we need to run syntstrip _without_ the `--no-csf` option**
 
@@ -289,7 +291,7 @@ The idea of running synthstrip now is to prepare in case fmriprep returns an uns
 
 - Iff the skull stripping on the original T1w is satisfactory, live happily ever after
 
-- Otherwise, just `cp *ORIG_T1w_brain.nii.gz` -> `*T1w.nii.gz` and re-run fmriprep enforcing `--skull-strip-t1w skip`
+- Otherwise, just `cp *ORIG_T1w_brain.nii.gz` -> `*T1w.nii.gz` and re-run fmriprep enforcing `--skull-strip-t1w auto`  (`skip` does not appear to work)
     
 <br>
 
@@ -383,8 +385,10 @@ deriv_root="/data03/.../fmriprep_synthstrip"   # adjust output directory accordi
 
 | `SKULL_STRIP_PROCEDURE` | What happens | `--skull-strip-t1w` |
 |------------------------|--------------|---------------------|
-| `synthstrip` | copies `ORIGINAL_T1W/*_ORIG_T1w_brain.nii.gz` → `anat/*_T1w.nii.gz` | `skip` |
+| `synthstrip` | copies `ORIGINAL_T1W/*_ORIG_T1w_brain.nii.gz` → `anat/*_T1w.nii.gz` | `auto` |
 | `fmriprep`   | restores `ORIGINAL_T1W/*_ORIG_T1w.nii.gz` → `anat/*_T1w.nii.gz` | `force` |
+
+NB: we use the `auto` instead of the `skip` option since the latter appear to be ignored.
 
 The script is **idempotent**: you can switch between modes at any time because the original full-head T1w is always safe in `ORIGINAL_T1W/` and is never overwritten. Subjects are processed in batches of `batch_size` with the `work_dir` cleaned between each batch to manage disk space.
 
